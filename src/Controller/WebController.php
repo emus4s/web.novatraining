@@ -15,4 +15,20 @@ class WebController extends AbstractController
             'controller_name' => 'WebController',
         ]);
     }
+
+    #[Route('/primary', name: 'app_web_primary')]
+    public function primary(): Response
+    {
+        return $this->render('web/primary.html.twig', [
+            'controller_name' => 'WebController',
+        ]);
+    }
+
+    #[Route('/secondary', name: 'app_web_secondary')]
+    public function secondary(): Response
+    {
+        return $this->render('web/secondary.html.twig', [
+            'controller_name' => 'WebController',
+        ]);
+    }
 }
