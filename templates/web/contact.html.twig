@@ -1,0 +1,33 @@
+{% extends 'base.html.twig' %}
+
+{% block body %}
+    <div class="row g-5">
+        <div class="col-8">
+    {{ form_start(form, {'attr': {'novalidate': 'novalidate'}}) }}
+    <div class="row">
+        <div class="col-6">
+            {{ form_row(form.nombre) }}
+        </div>
+        <div class="col-6">
+            {{ form_row(form.apellido) }}
+        </div>
+        <div class="col-6">
+            {{ form_row(form.telefono) }}
+        </div>
+        <div class="col-6">
+            {{ form_row(form.email) }}
+        </div>
+        <div class="col-12">
+            {{ form_row(form.mensaje) }}
+        </div>
+    </div>
+
+    {{ form_end(form) }}
+        </div>
+    </div>
+{% endblock %}
+
+{% block title %}
+    Consultas
+{% endblock %}
+
