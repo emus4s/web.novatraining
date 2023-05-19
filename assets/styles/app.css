@@ -37,3 +37,12 @@
     width: 3rem;
     height: 3rem;
 }
+
+.bg-image{
+   background-image: url("../images/banner_nova.png");
+}
+
+.servicio-img{
+    width: 350px;
+    height: 350px;
+}
