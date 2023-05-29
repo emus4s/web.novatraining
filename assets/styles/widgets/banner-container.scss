@@ -1,0 +1,96 @@
+.banner-container{
+    height: 180px;
+    width: 100%;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+  }
+  .banner-container-animation {
+    height: 125px;
+    width: 100%;
+  }
+  
+  .banner-container > .body {
+    height: 100%;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    padding-left: 3%;
+    padding-right: 3%;
+  }
+  .banner-container > .body > .content {
+    max-width: 50%;
+  }
+  
+  .banner-container > .left {
+    justify-content: left;
+  }
+  .banner-container > .center {
+    justify-content: center;
+  }
+  .banner-container > .right {
+    justify-content: right;
+  }
+  
+  
+  @media (min-width: 400px) {
+    .banner-container { height: 200px; }
+    .banner-container-animation { height: 200px; }
+  }
+  @media (min-width: 540px) {
+    .banner-container { height: 180px; }
+    .banner-container-animation { height: 180px; }
+  }
+  @media (min-width: 640px) {
+    .banner-container { height: 140px; }
+    .banner-container-animation { height: 140px; }
+  
+    .banner-container > .body > .content { max-width: 35%; }
+  }
+  @media (min-width: 720px) {
+    .banner-container { height: 140px; }
+    .banner-container-animation { height: 140px; }
+  }
+  @media (min-width: 767px) {
+    .banner-container { height: 188px; }
+    .banner-container-animation { height: 188px; }
+    .banner-container > .body {  padding-left: 6%; padding-right: 6%; }
+  }
+  @media (min-width: 960px) {
+    .banner-container { height: 188px; }
+    .banner-container-animation { height: 188px; }
+    .banner-container > .body {  padding-left: 8%; padding-right: 8%; }
+  }
+  @media (min-width: 1024px) {
+    .banner-container { height: 252px; }
+    .banner-container-animation { height: 252px; }
+  }
+  @media (min-width: 1152px) {
+    .banner-container { height: 252px; }
+    .banner-container-animation { height: 252px; }
+  }
+  @media (min-width: 1280px) {
+    .banner-container { height: 300px; }
+    .banner-container-animation { height: 300px; }
+  }
+  @media (min-width: 1360px) {
+    .banner-container { height: 300px; }
+    .banner-container-animation { height: 300px; }
+  }
+  @media (min-width: 1440px) {
+    .banner-container { height: 350px; }
+    .banner-container-animation { height: 350px; }
+  }
+  @media (min-width: 1600px) {
+    .banner-container { height: 350px; }
+    .banner-container-animation { height: 350px; }
+  }
+  @media (min-width: 1768px) {
+    .banner-container { height:350px; }
+    .banner-container-animation { height: 350px; }
+  }
+  @media (min-width: 1920px) {
+    .banner-container { height: 350px; }
+    .banner-container-animation { height: 350px; }
+  }
+  

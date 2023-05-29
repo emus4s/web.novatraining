@@ -18,6 +18,14 @@ class WebController extends AbstractController
         ]);
     }
 
+    #[Route('/referencia', name: 'app_web_referencia')]
+    public function referencia(): Response
+    {
+        return $this->render('web/referencia.html.twig', [
+            'controller_name' => 'WebController',
+        ]);
+    }
+
     #[Route('/contacto', name: 'app_web_contact')]
     public function conctact(Request $request): Response
     {

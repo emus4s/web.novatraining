@@ -1,298 +1,450 @@
 {% extends 'base.html.twig' %}
 
 {% block title %}Nova Training{% endblock %}
-
+{% block javascripts %}
+    <link rel="stylesheet" href="{{ asset('build/banners/banners.css') }}"/>
+{% endblock %}
 {% block body %}
-
-
-
-        <div class="my-5">
-            <div class="text-center">
-                <img src="{{ asset("build/images/banner_nova.png") }}" class="img-fluid" alt="">
-                <div class="container py-5" >
-                    <p class="col-lg-8 mx-auto lead">
-                        Somos una consultora que se desempeña en el área de gestión organizacional, impulsando el
-                        crecimiento a partir de Integrar nuevas experiencias, asistimos a personas, equipos y organizaciones a
-                        desarrollar pasión, propósito y compromiso para alcanzar los resultados que se proponen.
-                    </p>
-                </div>
-            </div>
-        </div>
-
-    {# Cards Servicios #}
-    <div class="row row-cols-1 row-cols-md-4 g-4">
-        <div class="col">
-            <div class="card">
-                <img src="{{ asset("build/images/nova_panel.jpg") }}" class="card-img-top img-fluid servicio-img" alt="...">
-                
-            </div>
-        </div>
-        <div class="col">
-            <div class="card">
-                <img src="{{ asset("build/images/nova_coaching.jpg") }}"  class="card-img-top img-fluid servicio-img" alt="...">
-
-            </div>
-        </div>
-        <div class="col">
-            <div class="card">
-                <img src="{{ asset("build/images/nova_lideres.jpg") }}" class="card-img-top img-fluid servicio-img" alt="...">
-
-            </div>
-        </div>
-        <div class="col">
-            <div class="card">
-                <img src="{{ asset("build/images/nova_guide.jpg") }}"  class="card-img-top img-fluid servicio-img" alt="...">
-
+{#
+<div class="row mb-5">
+    <div id="carousel" class="carousel slide">
+        <div class="carousel-inner">
+            <div class="carousel-item active">
+                <div class="banner bg-secondary"></div>
             </div>
         </div>
     </div>
-
-        <div class="container col-xxl-8 px-4 py-5">
-            <div class="row flex-lg-row-reverse align-items-center g-5 py-5">
-                <div class="col-10 col-sm-8 col-lg-6">
-                    <img src="{{ asset('build/images/nova_lideres.jpg') }}" class="d-block mx-lg-auto img-fluid" alt="Bootstrap Themes" width="700" height="500" loading="lazy">
-                </div>
-                <div class="col-lg-6">
-                    <h1 class="display-5 fw-bold text-body-emphasis lh-1 mb-3">NOVA LIDERES</h1>
-                    <p class="lead">Quickly design and customize responsive mobile-first sites with Bootstrap, the world’s most popular front-end open source toolkit, featuring Sass variables and mixins, responsive grid system, extensive prebuilt components, and powerful JavaScript plugins.</p>
-                    <div class="d-grid gap-2 d-md-flex justify-content-md-start">
-                        <button type="button" class="btn btn-primary btn-lg px-4 me-md-2">Demo Online</button>
-                        <button type="button" class="btn btn-outline-secondary btn-lg px-4">Precios</button>
+</div>
+#}
+{# BANNER CONTAINER #}
+<div class="container">
+    <div id="carousel-container" class="carousel slide" data-aos="fade-up" data-aos-duration="500" data-aos-once="true">
+        <div class="carousel-inner">
+            <div class="carousel-item active">
+                <div class="banner-container">
+                    <div id="b_03">
+                        <div style="display:none;width:1296px;height:350px;" id="el_03" class="js-bnfy">
+                            <img id="img_03" class="bnfy-enter" alt="1920  => 1600 { 1296 x 350 } " width="1296" height="350"
+                                src="{{ asset('build/images/banners/nova-training/c4965b1667176591829288329443b53b.svg') }}" />
+                        </div>
+                        <div style="display:none;width:1296px;height:350px;" id="el_1831" class="js-bnfy">
+                            <img id="img_1831" class="bnfy-enter" alt="fondo azul" width="1296" height="350"
+                                src="{{ asset('build/images/banners/nova-training/b8e9acda337ac7f728b17328848d8ef5.svg') }}" />
+                        </div>
+                        <div style="display:none;width:371px;height:102px;" id="el_1841" class="js-bnfy">
+                            <img id="img_1841" class="bnfy-enter" alt="nova" width="371" height="102"
+                                src="{{ asset('build/images/banners/nova-training/98c20c89dbc2d5cfedf0e5506955b3e0.svg') }}" />
+                        </div>
+                        <div style="display:none;width:285px;height:43px;" id="el_1842" class="js-bnfy">
+                            <img id="img_1842" class="bnfy-enter" alt="TRAINING" width="285" height="43"
+                                src="{{ asset('build/images/banners/nova-training/8612a98bbcfa0bfffeeb25f842e51e4d.svg') }}" />
+                        </div>
+                        <div style="display:none;width:288px;height:144px;" id="el_1846" class="js-bnfy">
+                            <img id="img_1846" class="bnfy-enter" alt="morado arriba" width="288" height="144"
+                                src="{{ asset('build/images/banners/nova-training/4d83d546536b2148e87f70b1a21e68eb.svg') }}" />
+                        </div>
+                        <div style="display:none;width:287px;height:144px;" id="el_1843" class="js-bnfy">
+                            <img id="img_1843" class="bnfy-enter" alt="sobra arriba" width="287" height="144"
+                                src="{{ asset('build/images/banners/nova-training/17659092a35f4b6242ff8d7265c6af9e.svg') }}" />
+                        </div>
+                        <div style="display:none;width:287px;height:144px;" id="el_1848" class="js-bnfy">
+                            <img id="img_1848" class="bnfy-enter" alt="brlanco abajo" width="287" height="144"
+                                src="{{ asset('build/images/banners/nova-training/097681167b7563ce371919186668aec6.svg') }}" />
+                        </div>
+                        <div style="display:none;width:287px;height:144px;" id="el_1845" class="js-bnfy">
+                            <img id="img_1845" class="bnfy-enter" alt="sombra abajo" width="287" height="144"
+                                src="{{ asset('build/images/banners/nova-training/905210b64ebd9e9ee6a319bb6c7ccbf9.svg') }}" />
+                        </div>
+                        <div style="display:none;width:151px;height:287px;" id="el_1847" class="js-bnfy">
+                            <img id="img_1847" class="bnfy-enter" alt="azul derecha" width="151" height="287"
+                                src="{{ asset('build/images/banners/nova-training/e566f58dc5548ec58d4aa02bb915edf7.svg') }}" />
+                        </div>
+                        <div style="display:none;width:151px;height:287px;" id="el_1844" class="js-bnfy">
+                            <img id="img_1844" class="bnfy-enter" alt="sobra derecha" width="151" height="287"
+                                src="{{ asset('build/images/banners/nova-training/6cc1f3691cedb7ad3b658662fba1d438.svg') }}" />
+                        </div>
                     </div>
                 </div>
-
             </div>
-        </div>
-
-    <div class="container col-xxl-8 px-4 py-5">
-        <div class="row flex-lg-row-reverse align-items-center g-5 py-5">
-            <div class="col-10 col-sm-8 col-lg-6">
-                <img src="{{ asset('build/images/nova_panel_2.jpg') }}" class="d-block mx-lg-auto img-fluid" alt="Bootstrap Themes" width="700" height="500" loading="lazy">
-            </div>
-            <div class="col-lg-6">
-                <h1 class="display-5 fw-bold text-body-emphasis lh-1 mb-3">NOVA PANEL</h1>
-                <p class="lead">Quickly design and customize responsive mobile-first sites with Bootstrap, the world’s most popular front-end open source toolkit, featuring Sass variables and mixins, responsive grid system, extensive prebuilt components, and powerful JavaScript plugins.</p>
-                <div class="d-grid gap-2 d-md-flex justify-content-md-start">
-                    <button type="button" class="btn btn-primary btn-lg px-4 me-md-2">Demo Online</button>
-                    <button type="button" class="btn btn-outline-secondary btn-lg px-4">Precios</button>
-                </div>
-            </div>
-
         </div>
     </div>
-        <div class="b-example-divider"></div>
+</div>
+{# PRESENTACION #}
+<div class="container py-5">
+    <p class="text-justify col-8 h5 mx-auto" data-aos="fade-up" data-aos-duration="500" data-aos-once="true">
+        Somos una consultora que se desempeña en el área de gestión organizacional, impulsando el
+        crecimiento a partir de Integrar nuevas experiencias, asistimos a personas, equipos y organizaciones a
+        desarrollar pasión, propósito y compromiso para alcanzar los resultados que se proponen.
+    </p>
+</div>
 
-        <div class="container px-4 py-5">
-            <h2 class="pb-2 border-bottom">Nuestras Soluciones</h2>
-
-                    <div class="row row-cols-1 row-cols-sm-2 g-4">
-                        <div class="col d-flex flex-column gap-2">
-                            <div class="feature-icon-small d-inline-flex align-items-center justify-content-center text-bg-primary bg-gradient fs-4 rounded-3">
-                                <svg xmlns="http://www.w3.org/2000/svg" width="1em" height="1em" fill="currentColor" class="bi bi-toggles2" viewBox="0 0 16 16">
-                                    <path d="M9.465 10H12a2 2 0 1 1 0 4H9.465c.34-.588.535-1.271.535-2 0-.729-.195-1.412-.535-2z"/>
-                                    <path d="M6 15a3 3 0 1 0 0-6 3 3 0 0 0 0 6zm0 1a4 4 0 1 1 0-8 4 4 0 0 1 0 8zm.535-10a3.975 3.975 0 0 1-.409-1H4a1 1 0 0 1 0-2h2.126c.091-.355.23-.69.41-1H4a2 2 0 1 0 0 4h2.535z"/>
-                                    <path d="M14 4a4 4 0 1 1-8 0 4 4 0 0 1 8 0z"/>
-                                </svg>
-                            </div>
-                            <h4 class="fw-semibold mb-0">Auditorias de Calidad</h4>
-                            <p class="text-body-secondary">Paragraph of text beneath the heading to explain the heading.</p>
+{# CARD ICON  #}
+<div class="container py-5">
+    <div class="row">
+        <div class="col-md-3 mb-3" data-aos="fade-up" data-aos-duration="500" data-aos-once="true">
+            <a href="#" class="text-decoration-none">
+                <div class="card-icon hover-float hover-shadow">
+                    <div class="body">
+                        <div class="icon">
+                            <svg  style="max-height: 100%;" viewBox="0 0 19 19" fill="none" stroke="currentColor" xmlns="http://www.w3.org/2000/svg">
+                                <path d="M1 17.9985H18V10.8322H11.744V13.7831H6.474V16.2781L1.02267 16.2895L1 17.9985Z" stroke-width="0.25" stroke-miterlimit="10"/>
+                                <path d="M1.578 17.52V16.7681H4.01467" stroke-width="0.25" stroke-linecap="round" stroke-linejoin="round"/>
+                                <path d="M7.07465 15.0818V14.3641H9.56798" stroke-width="0.25" stroke-linecap="round" stroke-linejoin="round"/>
+                                <path d="M12.356 12.1197V11.3905H14.838" stroke-width="0.25" stroke-linecap="round" stroke-linejoin="round"/>
+                                <path d="M2.77932 8.22324L1.31732 9.96638Z" stroke="none"/>
+                                <path d="M2.77932 8.22324L1.31732 9.96638" stroke-width="0.25" stroke-linecap="round" stroke-linejoin="round"/>
+                                <path d="M5.36333 7.84728C6.08314 7.84728 6.66666 7.26068 6.66666 6.53707C6.66666 5.81347 6.08314 5.22687 5.36333 5.22687C4.64352 5.22687 4.06 5.81347 4.06 6.53707C4.06 7.26068 4.64352 7.84728 5.36333 7.84728Z" stroke-width="0.25" stroke-linecap="round" stroke-linejoin="round"/>
+                                <path d="M4.57007 6.57124C4.59563 6.38667 4.67899 6.21508 4.80807 6.08134C4.94015 5.9356 5.12253 5.84596 5.31807 5.83069"stroke-width="0.25" stroke-linecap="round" stroke-linejoin="round"/>
+                                <path d="M9.20738 5.5C9.20738 5.5 7.93598 6.63958 7.30132 7.22063L6.53065 7.90421H4.42265C4.2448 7.90243 4.06902 7.94276 3.90955 8.02193C3.75007 8.1011 3.61136 8.21689 3.50466 8.35994C2.94932 9.05492 1.94066 10.3879 1.48732 11.0259C1.15866 11.5158 1.80466 12.0741 2.29199 11.5158C2.50732 11.2994 3.83332 9.49925 3.79932 9.52203C3.75399 11.1854 3.64066 14.535 3.64066 15.7427C3.64066 16.1528 4.70599 16.187 4.77399 15.7427C4.89865 15.0135 5.23865 13.2476 5.39732 12.5412C5.41725 12.4557 5.46472 12.3792 5.53235 12.3235C5.59997 12.2679 5.68398 12.2363 5.77132 12.2336H6.81399C6.99532 12.2336 7.07465 12.3019 7.07465 12.4387C7.0719 12.7018 7.09085 12.9648 7.13132 13.2248C7.18799 13.7603 8.19665 13.7717 8.19665 13.4527L8.50265 11.6411C8.57065 11.1512 8.44598 10.8892 8.02665 10.8095H6.89332V9.56761C6.90629 9.27903 7.02782 9.00618 7.23332 8.80427C7.23332 8.80427 9.04667 7.0013 9.5 6.5" stroke-width="0.25" stroke-linecap="round" stroke-linejoin="round"/>
+                                <path d="M12.016 3.57482C11.9067 3.56981 11.7989 3.60192 11.71 3.66596C11.4833 3.83686 10.8713 4.30398 9.19397 5.51164C8.78597 5.79647 9.35264 6.65095 9.90797 6.22941L11.7666 4.86224C11.7822 4.84779 11.8018 4.83857 11.8228 4.83585C11.8438 4.83313 11.8652 4.83705 11.8839 4.84707C11.9025 4.85709 11.9177 4.87271 11.9271 4.89176C11.9366 4.91081 11.9399 4.93235 11.9366 4.95338V10.3309C11.9366 10.6955 13.07 10.6499 13.07 10.3309V8.07509C13.07 7.68772 13.988 7.63076 13.988 8.07509C13.988 10.536 13.988 7.96116 13.988 10.4107C13.988 10.7525 15.1213 10.7183 15.1213 10.4107C15.1213 9.82963 15.1213 5.31796 15.1213 5.31796C15.5053 5.90218 15.9255 6.46155 16.3793 6.99275C16.8213 7.49404 17.5126 6.82185 17.1726 6.34334L15.1666 3.80268C15.1057 3.72525 15.0282 3.66253 14.9399 3.61916C14.8517 3.57578 14.7549 3.55284 14.6566 3.55203L12.016 3.57482Z" stroke-width="0.25" stroke-linecap="round" stroke-linejoin="round"/>
+                                <path d="M16.2093 4.05338L17.592 5.86488" stroke-width="0.25" stroke-linecap="round" stroke-linejoin="round"/>
+                                <path d="M13.5799 3.57484C14.2872 3.57484 14.8606 2.99844 14.8606 2.28742C14.8606 1.5764 14.2872 1 13.5799 1C12.8726 1 12.2993 1.5764 12.2993 2.28742C12.2993 2.99844 12.8726 3.57484 13.5799 3.57484Z" stroke-width="0.25" stroke-linecap="round" stroke-linejoin="round"/>
+                                <path d="M12.7413 2.24188C12.7464 2.03757 12.8273 1.84255 12.9679 1.69501C13.1103 1.55722 13.2932 1.46932 13.4893 1.44437" stroke-width="0.25" stroke-linecap="round" stroke-linejoin="round"/>
+                            </svg>
                         </div>
-
-                        <div class="col d-flex flex-column gap-2">
-                            <div class="feature-icon-small d-inline-flex align-items-center justify-content-center text-bg-primary bg-gradient fs-4 rounded-3">
-                                <svg xmlns="http://www.w3.org/2000/svg" width="1em" height="1em" fill="currentColor" class="bi bi-cpu-fill" viewBox="0 0 16 16">
-                                    <path d="M6.5 6a.5.5 0 0 0-.5.5v3a.5.5 0 0 0 .5.5h3a.5.5 0 0 0 .5-.5v-3a.5.5 0 0 0-.5-.5h-3z"/>
-                                    <path d="M5.5.5a.5.5 0 0 0-1 0V2A2.5 2.5 0 0 0 2 4.5H.5a.5.5 0 0 0 0 1H2v1H.5a.5.5 0 0 0 0 1H2v1H.5a.5.5 0 0 0 0 1H2v1H.5a.5.5 0 0 0 0 1H2A2.5 2.5 0 0 0 4.5 14v1.5a.5.5 0 0 0 1 0V14h1v1.5a.5.5 0 0 0 1 0V14h1v1.5a.5.5 0 0 0 1 0V14h1v1.5a.5.5 0 0 0 1 0V14a2.5 2.5 0 0 0 2.5-2.5h1.5a.5.5 0 0 0 0-1H14v-1h1.5a.5.5 0 0 0 0-1H14v-1h1.5a.5.5 0 0 0 0-1H14v-1h1.5a.5.5 0 0 0 0-1H14A2.5 2.5 0 0 0 11.5 2V.5a.5.5 0 0 0-1 0V2h-1V.5a.5.5 0 0 0-1 0V2h-1V.5a.5.5 0 0 0-1 0V2h-1V.5zm1 4.5h3A1.5 1.5 0 0 1 11 6.5v3A1.5 1.5 0 0 1 9.5 11h-3A1.5 1.5 0 0 1 5 9.5v-3A1.5 1.5 0 0 1 6.5 5z"/>
-                                </svg>
-                            </div>
-                            <h4 class="fw-semibold mb-0">Desarrollo de Perfiles y Seleccion de Personal</h4>
-                            <p class="text-body-secondary">Paragraph of text beneath the heading to explain the heading.</p>
+                        <div class="text">FORMACION PARA LIDERES</div>
+                    </div>
+                </div>
+            </a>
+        </div>
+        <div class="col-md-3 mb-3" data-aos="fade-up" data-aos-duration="500" data-aos-once="true">
+            <a href="#" class="text-decoration-none">
+                <div class="card-icon hover-float hover-shadow">
+                    <div class="body">
+                        <div class="icon">
+                           <img src="{{ asset('build/images/persona.svg') }}" style="max-height: 100%; height: 100%;"/>
                         </div>
-
-                        <div class="col d-flex flex-column gap-2">
-                            <div class="feature-icon-small d-inline-flex align-items-center justify-content-center text-bg-primary bg-gradient fs-4 rounded-3">
-                                <svg xmlns="http://www.w3.org/2000/svg" width="1em" height="1em" fill="currentColor" class="bi bi-tools" viewBox="0 0 16 16">
-                                    <path d="M1 0 0 1l2.2 3.081a1 1 0 0 0 .815.419h.07a1 1 0 0 1 .708.293l2.675 2.675-2.617 2.654A3.003 3.003 0 0 0 0 13a3 3 0 1 0 5.878-.851l2.654-2.617.968.968-.305.914a1 1 0 0 0 .242 1.023l3.27 3.27a.997.997 0 0 0 1.414 0l1.586-1.586a.997.997 0 0 0 0-1.414l-3.27-3.27a1 1 0 0 0-1.023-.242L10.5 9.5l-.96-.96 2.68-2.643A3.005 3.005 0 0 0 16 3c0-.269-.035-.53-.102-.777l-2.14 2.141L12 4l-.364-1.757L13.777.102a3 3 0 0 0-3.675 3.68L7.462 6.46 4.793 3.793a1 1 0 0 1-.293-.707v-.071a1 1 0 0 0-.419-.814L1 0Zm9.646 10.646a.5.5 0 0 1 .708 0l2.914 2.915a.5.5 0 0 1-.707.707l-2.915-2.914a.5.5 0 0 1 0-.708ZM3 11l.471.242.529.026.287.445.445.287.026.529L5 13l-.242.471-.026.529-.445.287-.287.445-.529.026L3 15l-.471-.242L2 14.732l-.287-.445L1.268 14l-.026-.529L1 13l.242-.471.026-.529.445-.287.287-.445.529-.026L3 11Z"/>
-                                </svg>
-                            </div>
-                            <h4 class="fw-semibold mb-0">Implementacion Proceso de Mejora</h4>
-                            <p class="text-body-secondary">Paragraph of text beneath the heading to explain the heading.</p>
+                        <div class="text">CULTURA ORGANIZACIONAL</div>
+                    </div>
+                </div>
+            </a>
+        </div>
+        <div class="col-md-3 mb-3" data-aos="fade-up" data-aos-duration="500" data-aos-once="true">
+            <a href="#" class="text-decoration-none">
+                <div class="card-icon hover-float hover-shadow">
+                    <div class="body">
+                        <div class="icon">
+                            <svg style="max-height: 100%;" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                <g clip-path="url(#clip0_1_2)">
+                                <path d="M6.49453 9.54221C6.09376 9.66238 5.67244 9.72247 5.23056 9.72247C2.79511 9.72247 0.822083 7.79972 0.822083 5.42633C0.822083 3.05294 2.79511 1.12018 5.23056 1.12018C7.66601 1.12018 9.63904 3.04293 9.63904 5.41632C9.63904 5.7568 9.59793 6.08727 9.526 6.39772" stroke="#223A7E" stroke-width="0.25" stroke-miterlimit="10"/>
+                                <path d="M5.63133 4.84549C7.21387 4.79542 7.92292 6.84836 7.41939 7.44921C7.12138 7.79971 3.81245 7.96996 3.11367 7.46924C2.48683 7.0186 3.24726 4.88555 4.70648 4.83548" fill="#81CEEA"/>
+                                <path d="M5.63133 4.84549C7.21387 4.79542 7.92292 6.84836 7.41939 7.44921C7.12138 7.79971 3.81245 7.96996 3.11367 7.46924C2.48683 7.0186 3.24726 4.88555 4.70648 4.83548" stroke="#223A7E" stroke-width="0.25" stroke-miterlimit="10"/>
+                                <path d="M5.19972 4.91561C5.88077 4.91561 6.43286 4.37758 6.43286 3.71389C6.43286 3.0502 5.88077 2.51218 5.19972 2.51218C4.51868 2.51218 3.96658 3.0502 3.96658 3.71389C3.96658 4.37758 4.51868 4.91561 5.19972 4.91561Z" stroke="#203B7B" stroke-width="0.25" stroke-miterlimit="10"/>
+                                <path d="M10.8105 14.8698C13.2453 14.8698 15.219 12.9464 15.219 10.5737C15.219 8.20097 13.2453 6.27753 10.8105 6.27753C8.37581 6.27753 6.40207 8.20097 6.40207 10.5737C6.40207 12.9464 8.37581 14.8698 10.8105 14.8698Z" stroke="#223A7E" stroke-width="0.25" stroke-miterlimit="10"/>
+                                <path d="M11.2319 9.99283C12.7938 9.96279 13.4926 11.9957 12.9994 12.5966C12.7014 12.9471 9.39243 13.1173 8.69365 12.6166C8.0668 12.1559 8.83751 10.0028 10.3276 9.98282" fill="#56564C"/>
+                                <path d="M11.2319 9.99283C12.7938 9.96279 13.4926 11.9957 12.9994 12.5966C12.7014 12.9471 9.39243 13.1173 8.69365 12.6166C8.0668 12.1559 8.83751 10.0028 10.3276 9.98282" stroke="#223A7E" stroke-width="0.25" stroke-miterlimit="10"/>
+                                <path d="M10.7797 10.0629C11.4608 10.0629 12.0129 9.52492 12.0129 8.86123C12.0129 8.19754 11.4608 7.65952 10.7797 7.65952C10.0987 7.65952 9.54657 8.19754 9.54657 8.86123C9.54657 9.52492 10.0987 10.0629 10.7797 10.0629Z" stroke="#203B7B" stroke-width="0.25" stroke-miterlimit="10"/>
+                                <path d="M1.50034 9.84262V12.7468C1.50034 13.7682 2.30188 14.4592 3.35005 14.4592H7.04947" stroke="#233774" stroke-width="0.25" stroke-miterlimit="10"/>
+                                <path d="M0.390502 11.9957H2.63071C2.83623 11.9957 2.94927 11.7754 2.84651 11.6152L1.71613 9.96279C1.61337 9.81257 1.39757 9.81257 1.29481 9.96279L0.174703 11.6152C0.0616647 11.7854 0.174703 12.0057 0.390502 12.0057V11.9957Z" fill="#55564D" stroke="#233774" stroke-width="0.25" stroke-miterlimit="10"/>
+                                <path d="M14.4894 6.35765V3.4535C14.4894 2.43205 13.6879 1.74106 12.6397 1.74106H8.94028" stroke="#233774" stroke-width="0.25" stroke-miterlimit="10"/>
+                                <path d="M15.6095 4.20456H13.3693C13.1638 4.20456 13.0508 4.42488 13.1535 4.58511L14.2839 6.23747C14.3867 6.38768 14.6025 6.38768 14.7052 6.23747L15.8253 4.58511C15.9384 4.41486 15.8253 4.19455 15.6095 4.19455V4.20456Z" fill="#67C7ED" stroke="#233774" stroke-width="0.25" stroke-miterlimit="10"/>
+                                </g>
+                                <defs>
+                                <clipPath id="clip0_1_2">
+                                <rect width="16" height="14" fill="white" transform="translate(0 1)"/>
+                                </clipPath>
+                                </defs>
+                            </svg>
                         </div>
+                        <div class="text">COACHING</div>
+                    </div>
+                </div>
+            </a>
+        </div>
+        <div class="col-md-3 mb-3" data-aos="fade-up" data-aos-duration="500" data-aos-once="true">
+            <a href="#" class="text-decoration-none">
+                <div class="card-icon hover-float hover-shadow">
+                    <div class="body">
+                        <div class="icon">
+                            <svg style="max-height: 100%;" viewBox="0 0 16 16" fill="none" stroke="currentColor" xmlns="http://www.w3.org/2000/svg">
+                                <g clip-path="url(#clip0_1_2)">
+                                <path d="M9.73 11.52C10.44 11.8 10.98 12.39 10.98 13.3V15.06H6.44V13.3C6.44 12.34 7.05 11.73 7.82 11.47" stroke-width="0.2" stroke-miterlimit="10"/>
+                                <path d="M10.98 15.06H15.8V11.87C15.8 11.87 15.96 9.82001 13.47 8.67001C13.43 8.65001 12.8 8.51001 12.81 7.79001" stroke-width="0.2" stroke-miterlimit="10"/>
+                                <path d="M7.81 12.04C7.81 13.41 9.72 13.41 9.72 12.04V8.69999C9.72 7.32999 7.81 7.32999 7.81 8.69999V12.04Z" stroke-width="0.2" stroke-miterlimit="10"/>
+                                <path d="M14.16 11.28V15.06" stroke-width="0.2" stroke-miterlimit="10"/>
+                                <path d="M9.73001 12.22C10.15 12.54 10.45 13.08 10.45 13.86H7.04001C7.04001 13.05 7.37001 12.49 7.82001 12.18" stroke-width="0.2" stroke-miterlimit="10"/>
+                                <path d="M9.73001 8.70999C10.4 8.51999 10.76 8.19999 10.66 7.70999" stroke-width="0.2" stroke-miterlimit="10"/>
+                                <path d="M0.170013 12.88H4.26001V10.19V8.25" stroke-width="0.2" stroke-miterlimit="10"/>
+                                <path d="M3.96999 6.75C3.96999 7.46 0.919988 7.46 0.919988 6.75C0.679988 6.77 0.389988 6.85 0.0499878 7.01" stroke-width="0.2" stroke-miterlimit="10"/>
+                                <path d="M4.26001 10.16H5.51001V8.07999C5.51001 7.37999 4.79001 6.93999 3.95001 6.73999" stroke-width="0.2" stroke-miterlimit="10"/>
+                                <path d="M3.97001 6.75L2.43001 6L0.920013 6.75" stroke-width="0.2" stroke-miterlimit="10"/>
+                                <path d="M4.26001 12.88H5.98001V8.25" stroke-width="0.2" stroke-miterlimit="10"/>
+                                <path d="M3.32001 6.46L4.25001 6L5.70001 6.72" stroke-width="0.2" stroke-miterlimit="10"/>
+                                <path d="M0.0899963 4.95001H9.26" stroke-width="0.2" stroke-miterlimit="10"/>
+                                <path d="M0.0899963 4.20001H9.26" stroke-width="0.2" stroke-miterlimit="10"/>
+                                <path d="M9.84 4.06999C9.84 3.79999 11.58 3.79999 11.58 4.06999V4.84999C11.58 5.43999 9.84 5.43999 9.84 4.84999V4.06999Z" stroke-width="0.2" stroke-miterlimit="10"/>
+                                <path d="M12.15 4.06999C12.15 3.79999 13.89 3.79999 13.89 4.06999V4.84999C13.89 5.43999 12.15 5.43999 12.15 4.84999V4.06999Z" stroke-width="0.2" stroke-miterlimit="10"/>
+                                <path d="M11.58 4.23001H12.15" stroke-width="0.2" stroke-miterlimit="10"/>
+                                <path d="M14.42 4.45001C14.42 6.36001 13.89 7.91001 11.85 7.91001C9.81 7.91001 9.28 6.36001 9.28 4.45001C9.28 2.54001 9.84 1.10001 11.93 1.10001C13.89 1.10001 14.42 2.54001 14.42 4.45001Z" stroke-width="0.2" stroke-miterlimit="10"/>
+                                <path d="M5.95999 10.12H7.20999V8.04001C7.20999 7.34001 6.48999 6.90001 5.64999 6.70001" stroke-width="0.2" stroke-miterlimit="10"/>
+                                <path d="M5.77999 6.73999C5.11999 6.78999 4.44999 6.80999 3.89999 6.70999" stroke-width="0.2" stroke-miterlimit="10"/>
+                                <path d="M1.59 4.35V4.16C1.59 3.49 2.9 3.45 3.05 4.16C3.19 4.6 2.76 4.8 2.44 5.42C2.37 5.55 2.44 6 2.44 6" stroke-width="0.2" stroke-miterlimit="10"/>
+                                <path d="M3.42999 4.35999V4.18999C3.42999 3.51999 4.69999 3.48999 4.88999 4.18999C5.00999 4.62999 4.59999 4.82999 4.27999 5.44999C4.20999 5.57999 4.27999 5.87999 4.27999 6.02999" stroke-width="0.2" stroke-miterlimit="10"/>
+                                </g>
+                                <defs>
+                                <clipPath id="clip0_1_2">
+                                <rect width="15.9" height="14.16" fill="white" transform="translate(0 1)"/>
+                                </clipPath>
+                                </defs>
+                            </svg>
+                        </div>
+                        <div class="text">MYSTERY SHOPPER</div>
+                    </div>
+                </div>
+            </a>
+        </div>
+    </div>
+</div>
 
-                        <div class="col d-flex flex-column gap-2">
-                            <div class="feature-icon-small d-inline-flex align-items-center justify-content-center text-bg-primary bg-gradient fs-4 rounded-3">
-                                <svg xmlns="http://www.w3.org/2000/svg" width="1em" height="1em" fill="currentColor" class="bi bi-speedometer" viewBox="0 0 16 16">
-                                    <path d="M8 2a.5.5 0 0 1 .5.5V4a.5.5 0 0 1-1 0V2.5A.5.5 0 0 1 8 2zM3.732 3.732a.5.5 0 0 1 .707 0l.915.914a.5.5 0 1 1-.708.708l-.914-.915a.5.5 0 0 1 0-.707zM2 8a.5.5 0 0 1 .5-.5h1.586a.5.5 0 0 1 0 1H2.5A.5.5 0 0 1 2 8zm9.5 0a.5.5 0 0 1 .5-.5h1.5a.5.5 0 0 1 0 1H12a.5.5 0 0 1-.5-.5zm.754-4.246a.389.389 0 0 0-.527-.02L7.547 7.31A.91.91 0 1 0 8.85 8.569l3.434-4.297a.389.389 0 0 0-.029-.518z"/>
-                                    <path fill-rule="evenodd" d="M6.664 15.889A8 8 0 1 1 9.336.11a8 8 0 0 1-2.672 15.78zm-4.665-4.283A11.945 11.945 0 0 1 8 10c2.186 0 4.236.585 6.001 1.606a7 7 0 1 0-12.002 0z"/>
-                                </svg>
+<div class="container py-5">
+    <div class="row">
+        <div class="col-12 mb-5" data-aos="fade-up" data-aos-duration="500" data-aos-once="true">
+            <div class="row">
+                <div class="col-md-8">
+                    <div class="w-100 w-100 h-100 d-flex align-items-center justify-content-center">
+                        <div>
+                            <h1 class="text-nova display-5 fw-bold text-body-emphasis lh-1 mb-3">NOVA LIDERES</h1>
+                            <p class="lead">Quickly design and customize responsive mobile-first sites with Bootstrap, the world’s most popular front-end open source toolkit, featuring Sass variables and mixins, responsive grid system, extensive prebuilt components, and powerful JavaScript plugins.</p>
+                            <div class="d-grid gap-2 d-md-flex justify-content-md-start">
+                                <button type="button" class="btn btn-primary btn-lg px-4 me-md-2 border-radius-0">Demo Online</button>
+                                <button type="button" class="btn btn-outline-secondary btn-lg px-4 border-radius-0">Precios</button>
                             </div>
-                            <h4 class="fw-semibold mb-0">Consultoria</h4>
-                            <p class="text-body-secondary">Paragraph of text beneath the heading to explain the heading.</p>
                         </div>
                     </div>
                 </div>
-
-        <div class="row g-5">
-            <div class="col-md-6">
-                <h2 class="text-body-emphasis">Valores</h2>
-                <p>Ready to beyond the starter template? Check out these open source projects that you can quickly duplicate to a new GitHub repository.</p>
-                <ul class="list-unstyled ps-0">
-                    <li>
-                        <a class="icon-link mb-1" href="#" rel="noopener" target="_blank">
-                            <svg class="bi" width="16" height="16"><use xlink:href="#arrow-right-circle"/></svg>
-                            INTEGRIDAD
-                        </a>
-                    </li>
-                    <li>
-                        <a class="icon-link mb-1" href="#" rel="noopener" target="_blank">
-                            <svg class="bi" width="16" height="16"><use xlink:href="#arrow-right-circle"/></svg>
-                            CONFIDENCIALIDAD
-                        </a>
-                    </li>
-                    <li>
-                        <a class="icon-link mb-1" href="#" rel="noopener" target="_blank">
-                            <svg class="bi" width="16" height="16"><use xlink:href="#arrow-right-circle"/></svg>
-                            DISCRECIÓN
-                        </a>
-                    </li>
-                    <li>
-                        <a class="icon-link mb-1" href="#" rel="noopener" target="_blank">
-                            <svg class="bi" width="16" height="16"><use xlink:href="#arrow-right-circle"/></svg>
-                            COMPROMISO
-                        </a>
-                    </li>
-                    <li>
-                        <a class="icon-link mb-1" href="#" rel="noopener" target="_blank">
-                            <svg class="bi" width="16" height="16"><use xlink:href="#arrow-right-circle"/></svg>
-                            INNOVACIÓN
-                        </a>
-                    </li>
-                    <li>
-                        <a class="icon-link mb-1" href="#" rel="noopener" target="_blank">
-                            <svg class="bi" width="16" height="16"><use xlink:href="#arrow-right-circle"/></svg>
-                            ORIENTACIÓN AL RESULTADO
-                        </a>
-                    </li>
-                    <li>
-                        <a class="icon-link mb-1" href="#" rel="noopener" target="_blank">
-                            <svg class="bi" width="16" height="16"><use xlink:href="#arrow-right-circle"/></svg>
-                            ORIENTACIÓN AL CLIENTE
-                        </a>
-                    </li>
-                </ul>
+                <div class="col-md-4 d-none d-lg-block">
+                    <div class="w-100 h-100 d-flex align-items-center justify-content-end">
+                        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 15.32 9.27">                            
+                            <g id="Capa_2" data-name="Capa 2">
+                                <polygon class="cls-1" fill="#3f98d4" points="0 6.96 1.66 8.62 5.11 5.17 8.44 8.5 13.65 3.29 15.32 4.95 15.32 0 10.38 0 12 1.62 8.49 5.14 5.18 1.83 0 6.96"/>
+                            </g>
+                            <g id="Capa_3" data-name="Capa 3">
+                                <circle class="cls-2" fill="#4c67af" cx="4.99" cy="8.05" r="1.22"/>
+                                <circle class="cls-3" fill="#a5a5a4" cx="11.77" cy="8.05" r="1.22"/>
+                                <circle class="cls-4" fill="#154e9c" cx="8.41" cy="2.35" r="1.22"/>
+                            </g>
+                        </svg>                    
+                    </div>
+                </div>
             </div>
+        </div>
+    </div>
+</div>
 
-            <div class="col-md-6">
-            <h2 class="text-body-emphasis">BENEFICIOS DE NOVA</h2>
+
+<div class="container">
+    <div class="row">
+        <h2 class="text-nova border-bottom mb-3 pb-2">Nuestras Soluciones</h2>
+    </div> 
+    <div class="row">
+        <div class="col-md-6 mb-3" data-aos="fade-up" data-aos-duration="500" data-aos-once="true">
+            <div class="row">
+                <div class="col-12 mb-2">
+                    <div class="feature-icon-small d-inline-flex align-items-center justify-content-center text-bg-primary bg-gradient fs-4 rounded-3">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="1em" height="1em" fill="currentColor" class="bi bi-toggles2" viewBox="0 0 16 16">
+                            <path d="M9.465 10H12a2 2 0 1 1 0 4H9.465c.34-.588.535-1.271.535-2 0-.729-.195-1.412-.535-2z"/>
+                            <path d="M6 15a3 3 0 1 0 0-6 3 3 0 0 0 0 6zm0 1a4 4 0 1 1 0-8 4 4 0 0 1 0 8zm.535-10a3.975 3.975 0 0 1-.409-1H4a1 1 0 0 1 0-2h2.126c.091-.355.23-.69.41-1H4a2 2 0 1 0 0 4h2.535z"/>
+                            <path d="M14 4a4 4 0 1 1-8 0 4 4 0 0 1 8 0z"/>
+                        </svg>
+                    </div>
+                </div>
+                <div class="col-12">
+                    <h4 class="text-nova fw-semibold mb-0">Auditorias de Calidad</h4>
+                    <p class="text-body-secondary">Paragraph of text beneath the heading to explain the heading.</p>
+                </div>
+            </div>
+        </div>
+        <div class="col-md-6 mb-3" data-aos="fade-up" data-aos-duration="500" data-aos-once="true">
+            <div class="row">
+                <div class="col-12 mb-2">
+                    <div class="feature-icon-small d-inline-flex align-items-center justify-content-center text-bg-primary bg-gradient fs-4 rounded-3">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="1em" height="1em" fill="currentColor" class="bi bi-cpu-fill" viewBox="0 0 16 16">
+                            <path d="M6.5 6a.5.5 0 0 0-.5.5v3a.5.5 0 0 0 .5.5h3a.5.5 0 0 0 .5-.5v-3a.5.5 0 0 0-.5-.5h-3z"/>
+                            <path d="M5.5.5a.5.5 0 0 0-1 0V2A2.5 2.5 0 0 0 2 4.5H.5a.5.5 0 0 0 0 1H2v1H.5a.5.5 0 0 0 0 1H2v1H.5a.5.5 0 0 0 0 1H2v1H.5a.5.5 0 0 0 0 1H2A2.5 2.5 0 0 0 4.5 14v1.5a.5.5 0 0 0 1 0V14h1v1.5a.5.5 0 0 0 1 0V14h1v1.5a.5.5 0 0 0 1 0V14h1v1.5a.5.5 0 0 0 1 0V14a2.5 2.5 0 0 0 2.5-2.5h1.5a.5.5 0 0 0 0-1H14v-1h1.5a.5.5 0 0 0 0-1H14v-1h1.5a.5.5 0 0 0 0-1H14v-1h1.5a.5.5 0 0 0 0-1H14A2.5 2.5 0 0 0 11.5 2V.5a.5.5 0 0 0-1 0V2h-1V.5a.5.5 0 0 0-1 0V2h-1V.5a.5.5 0 0 0-1 0V2h-1V.5zm1 4.5h3A1.5 1.5 0 0 1 11 6.5v3A1.5 1.5 0 0 1 9.5 11h-3A1.5 1.5 0 0 1 5 9.5v-3A1.5 1.5 0 0 1 6.5 5z"/>
+                        </svg>
+                    </div>
+                </div>
+                <div class="col-12 mb-2">
+                    <h4 class="text-nova fw-semibold mb-0">Desarrollo de Perfiles y Seleccion de Personal</h4>
+                    <p class="text-body-secondary">Paragraph of text beneath the heading to explain the heading.</p>
+                </div>
+            </div>
+        </div>
+        <div class="col-md-6 mb-3" data-aos="fade-up" data-aos-duration="500" data-aos-once="true">
+            <div class="row">
+                <div class="col-12 mb-2">
+                    <div class="feature-icon-small d-inline-flex align-items-center justify-content-center text-bg-primary bg-gradient fs-4 rounded-3">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="1em" height="1em" fill="currentColor" class="bi bi-tools" viewBox="0 0 16 16">
+                            <path d="M1 0 0 1l2.2 3.081a1 1 0 0 0 .815.419h.07a1 1 0 0 1 .708.293l2.675 2.675-2.617 2.654A3.003 3.003 0 0 0 0 13a3 3 0 1 0 5.878-.851l2.654-2.617.968.968-.305.914a1 1 0 0 0 .242 1.023l3.27 3.27a.997.997 0 0 0 1.414 0l1.586-1.586a.997.997 0 0 0 0-1.414l-3.27-3.27a1 1 0 0 0-1.023-.242L10.5 9.5l-.96-.96 2.68-2.643A3.005 3.005 0 0 0 16 3c0-.269-.035-.53-.102-.777l-2.14 2.141L12 4l-.364-1.757L13.777.102a3 3 0 0 0-3.675 3.68L7.462 6.46 4.793 3.793a1 1 0 0 1-.293-.707v-.071a1 1 0 0 0-.419-.814L1 0Zm9.646 10.646a.5.5 0 0 1 .708 0l2.914 2.915a.5.5 0 0 1-.707.707l-2.915-2.914a.5.5 0 0 1 0-.708ZM3 11l.471.242.529.026.287.445.445.287.026.529L5 13l-.242.471-.026.529-.445.287-.287.445-.529.026L3 15l-.471-.242L2 14.732l-.287-.445L1.268 14l-.026-.529L1 13l.242-.471.026-.529.445-.287.287-.445.529-.026L3 11Z"/>
+                        </svg>
+                    </div>
+                </div>
+                <div class="col-12">
+                    <h4 class="text-nova fw-semibold mb-0">Implementacion Proceso de Mejora</h4>
+                    <p class="text-body-secondary">Paragraph of text beneath the heading to explain the heading.</p>
+                </div>
+            </div>
+        </div>
+        <div class="col-md-6 mb-3" data-aos="fade-up" data-aos-duration="500" data-aos-once="true">
+            <div class="row">
+                <div class="col-12 mb-2">
+                    <div class="feature-icon-small d-inline-flex align-items-center justify-content-center text-bg-primary bg-gradient fs-4 rounded-3">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="1em" height="1em" fill="currentColor" class="bi bi-speedometer" viewBox="0 0 16 16">
+                            <path d="M8 2a.5.5 0 0 1 .5.5V4a.5.5 0 0 1-1 0V2.5A.5.5 0 0 1 8 2zM3.732 3.732a.5.5 0 0 1 .707 0l.915.914a.5.5 0 1 1-.708.708l-.914-.915a.5.5 0 0 1 0-.707zM2 8a.5.5 0 0 1 .5-.5h1.586a.5.5 0 0 1 0 1H2.5A.5.5 0 0 1 2 8zm9.5 0a.5.5 0 0 1 .5-.5h1.5a.5.5 0 0 1 0 1H12a.5.5 0 0 1-.5-.5zm.754-4.246a.389.389 0 0 0-.527-.02L7.547 7.31A.91.91 0 1 0 8.85 8.569l3.434-4.297a.389.389 0 0 0-.029-.518z"/>
+                            <path fill-rule="evenodd" d="M6.664 15.889A8 8 0 1 1 9.336.11a8 8 0 0 1-2.672 15.78zm-4.665-4.283A11.945 11.945 0 0 1 8 10c2.186 0 4.236.585 6.001 1.606a7 7 0 1 0-12.002 0z"/>
+                        </svg>
+                    </div>
+                </div>
+                <div class="col-12">
+                    <h4 class="text-nova fw-semibold mb-0">Consultoria</h4>
+                    <p class="text-body-secondary">Paragraph of text beneath the heading to explain the heading.</p>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<div class="container py-5">
+    <div class="row g-5">
+        <div class="col-md-6" data-aos="fade-up" data-aos-duration="500" data-aos-once="true">
+            <h2 class="text-body-emphasis text-nova fw-semibold">Valores</h2>
+            <p>Ready to beyond the starter template? Check out these open source projects that you can quickly duplicate to a new GitHub repository.</p>
+            <ul class="list-unstyled ps-0">
+                <li>
+                    <a class="text-decoration-none mb-1" href="#" rel="noopener" target="_blank">
+                        <i class="bi bi-check-lg"></i>
+                        INTEGRIDAD
+                    </a>
+                </li>
+                <li>
+                    <a class="text-decoration-none mb-1" href="#" rel="noopener" target="_blank">
+                        <i class="bi bi-check-lg"></i>
+                        CONFIDENCIALIDAD
+                    </a>
+                </li>
+                <li>
+                    <a class="text-decoration-none mb-1" href="#" rel="noopener" target="_blank">
+                        <i class="bi bi-check-lg"></i>
+                        DISCRECIÓN
+                    </a>
+                </li>
+                <li>
+                    <a class="text-decoration-none mb-1" href="#" rel="noopener" target="_blank">
+                        <i class="bi bi-check-lg"></i>
+                        COMPROMISO
+                    </a>
+                </li>
+                <li>
+                    <a class="text-decoration-none mb-1" href="#" rel="noopener" target="_blank">
+                        <i class="bi bi-check-lg"></i>
+                        INNOVACIÓN
+                    </a>
+                </li>
+                <li>
+                    <a class="text-decoration-none mb-1" href="#" rel="noopener" target="_blank">
+                        <i class="bi bi-check-lg"></i>
+                        ORIENTACIÓN AL RESULTADO
+                    </a>
+                </li>
+                <li>
+                    <a class="text-decoration-none mb-1" href="#" rel="noopener" target="_blank">
+                        <i class="bi bi-check-lg"></i>
+                        ORIENTACIÓN AL CLIENTE
+                    </a>
+                </li>
+            </ul>
+        </div>
+        <div class="col-md-6" data-aos="fade-up" data-aos-duration="500" data-aos-once="true">
+            <h2 class="text-body-emphasis text-nova fw-semibold">Beneficios</h2>
             <p>Read more detailed instructions and documentation on using or contributing to Bootstrap.</p>
             <ul class="list-unstyled ps-0">
                 <li>
-                    <a class="icon-link mb-1" href="#">
-                        <svg class="bi" width="16" height="16"><use xlink:href="#arrow-right-circle"/></svg>
+                    <a class="text-decoration-none mb-1" href="#">
+                        <i class="bi bi-check-lg"></i>
                         Información de manera inmediata
                     </a>
                 </li>
                 <li>
-                    <a class="icon-link mb-1" href="#">
-                        <svg class="bi" width="16" height="16"><use xlink:href="#arrow-right-circle"/></svg>
+                    <a class="text-decoration-none mb-1" href="#">
+                        <i class="bi bi-check-lg"></i>
                         Facilita la toma de decisiones
                     </a>
                 </li>
                 <li>
-                    <a class="icon-link mb-1" href="#">
-                        <svg class="bi" width="16" height="16"><use xlink:href="#arrow-right-circle"/></svg>
+                    <a class="text-decoration-none mb-1" href="#">
+                        <i class="bi bi-check-lg"></i>
                         Permite detectar desvíos y decidir las medidas correctivas
                     </a>
                 </li>
                 <li>
-                    <a class="icon-link mb-1" href="#">
-                        <svg class="bi" width="16" height="16"><use xlink:href="#arrow-right-circle"/></svg>
+                    <a class="text-decoration-none mb-1" href="#">
+                        <i class="bi bi-check-lg"></i>
                         Mide el desempeño de nuestros colaboradores
                     </a>
                 </li>
                 <li>
-                    <a class="icon-link mb-1" href="#">
-                        <svg class="bi" width="16" height="16"><use xlink:href="#arrow-right-circle"/></svg>
+                    <a class="text-decoration-none mb-1" href="#">
+                        <i class="bi bi-check-lg"></i>
                         Medir los avances y cumplimiento
                     </a>
                 </li>
                 <li>
-                    <a class="icon-link mb-1" href="#">
-                        <svg class="bi" width="16" height="16"><use xlink:href="#arrow-right-circle"/></svg>
+                    <a class="text-decoration-none mb-1" href="#">
+                        <i class="bi bi-check-lg"></i>
                         Información de manera inmediata
                     </a>
                 </li>
                 <li>
-                    <a class="icon-link mb-1" href="#">
-                        <svg class="bi" width="16" height="16"><use xlink:href="#arrow-right-circle"/></svg>
+                    <a class="text-decoration-none mb-1" href="#">
+                        <i class="bi bi-check-lg"></i>
                         Facilita la toma de decisiones
                     </a>
                 </li>
                 <li>
-                    <a class="icon-link mb-1" href="#">
-                        <svg class="bi" width="16" height="16"><use xlink:href="#arrow-right-circle"/></svg>
+                    <a class="text-decoration-none mb-1" href="#">
+                        <i class="bi bi-check-lg"></i>
                         Permite detectar desvíos y decidir las medidas correctivas.
                     </a>
                 </li>
                 <li>
-                    <a class="icon-link mb-1" href="#">
-                        <svg class="bi" width="16" height="16"><use xlink:href="#arrow-right-circle"/></svg>
+                    <a class="text-decoration-none mb-1" href="#">
+                        <i class="bi bi-check-lg"></i>
                         Mide el desempeño de nuestros colaboradores
                     </a>
                 </li>
                 <li>
-                    <a class="icon-link mb-1" href="#">
-                        <svg class="bi" width="16" height="16"><use xlink:href="#arrow-right-circle"/></svg>
+                    <a class="text-decoration-none mb-1" href="#">
+                        <i class="bi bi-check-lg"></i>
                         Medir los avances y cumplimiento
                     </a>
                 </li>
                 <li>
-                    <a class="icon-link mb-1" href="#">
-                        <svg class="bi" width="16" height="16"><use xlink:href="#arrow-right-circle"/></svg>
+                    <a class="text-decoration-none mb-1" href="#">
+                        <i class="bi bi-check-lg"></i>
                         Optimización de los recursos
                     </a>
                 </li>
                 <li>
-                    <a class="icon-link mb-1" href="#">
-                        <svg class="bi" width="16" height="16"><use xlink:href="#arrow-right-circle"/></svg>
+                    <a class="text-decoration-none mb-1" href="#">
+                        <i class="bi bi-check-lg"></i>
                         Incremento en las ventas
                     </a>
                 </li>
                 <li>
-                    <a class="icon-link mb-1" href="#">
-                        <svg class="bi" width="16" height="16"><use xlink:href="#arrow-right-circle"/></svg>
+                    <a class="text-decoration-none mb-1" href="#">
+                        <i class="bi bi-check-lg"></i>
                         Integrar el plan estratégico de la empresa con los planes de la compañía
                     </a>
                 </li>
                 <li>
-                    <a class="icon-link mb-1" href="#">
-                        <svg class="bi" width="16" height="16"><use xlink:href="#arrow-right-circle"/></svg>
+                    <a class="text-decoration-none mb-1" href="#">
+                        <i class="bi bi-check-lg"></i>
                         Todo en un solo sitio
                     </a>
                 </li>
             </ul>
         </div>
-
-            <footer class="d-flex flex-wrap justify-content-between align-items-center py-3 my-4 border-top">
-                <div class="col-md-4 d-flex align-items-center">
-                    <a href="/" class="mb-3 me-2 mb-md-0 text-body-secondary text-decoration-none lh-1">
-                        <svg class="bi" width="30" height="24"><use xlink:href="#bootstrap"/></svg>
-                    </a>
-                    <span class="mb-3 mb-md-0 text-body-secondary">NOVA TRAINING &copy; 2023 Company, Inc</span>
-                </div>
-
-                <ul class="nav col-md-4 justify-content-end list-unstyled d-flex">
-                    <li class="ms-3"><a class="text-body-secondary" href="#"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="currentColor" class="bi bi-twitter" viewBox="0 0 16 16">
-                                <path d="M5.026 15c6.038 0 9.341-5.003 9.341-9.334 0-.14 0-.282-.006-.422A6.685 6.685 0 0 0 16 3.542a6.658 6.658 0 0 1-1.889.518 3.301 3.301 0 0 0 1.447-1.817 6.533 6.533 0 0 1-2.087.793A3.286 3.286 0 0 0 7.875 6.03a9.325 9.325 0 0 1-6.767-3.429 3.289 3.289 0 0 0 1.018 4.382A3.323 3.323 0 0 1 .64 6.575v.045a3.288 3.288 0 0 0 2.632 3.218 3.203 3.203 0 0 1-.865.115 3.23 3.23 0 0 1-.614-.057 3.283 3.283 0 0 0 3.067 2.277A6.588 6.588 0 0 1 .78 13.58a6.32 6.32 0 0 1-.78-.045A9.344 9.344 0 0 0 5.026 15z"/>
-                            </svg></a></li>
-                    <li class="ms-3"><a class="text-body-secondary" href="#"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="currentColor" class="bi bi-instagram" viewBox="0 0 16 16">
-                                <path d="M8 0C5.829 0 5.556.01 4.703.048 3.85.088 3.269.222 2.76.42a3.917 3.917 0 0 0-1.417.923A3.927 3.927 0 0 0 .42 2.76C.222 3.268.087 3.85.048 4.7.01 5.555 0 5.827 0 8.001c0 2.172.01 2.444.048 3.297.04.852.174 1.433.372 1.942.205.526.478.972.923 1.417.444.445.89.719 1.416.923.51.198 1.09.333 1.942.372C5.555 15.99 5.827 16 8 16s2.444-.01 3.298-.048c.851-.04 1.434-.174 1.943-.372a3.916 3.916 0 0 0 1.416-.923c.445-.445.718-.891.923-1.417.197-.509.332-1.09.372-1.942C15.99 10.445 16 10.173 16 8s-.01-2.445-.048-3.299c-.04-.851-.175-1.433-.372-1.941a3.926 3.926 0 0 0-.923-1.417A3.911 3.911 0 0 0 13.24.42c-.51-.198-1.092-.333-1.943-.372C10.443.01 10.172 0 7.998 0h.003zm-.717 1.442h.718c2.136 0 2.389.007 3.232.046.78.035 1.204.166 1.486.275.373.145.64.319.92.599.28.28.453.546.598.92.11.281.24.705.275 1.485.039.843.047 1.096.047 3.231s-.008 2.389-.047 3.232c-.035.78-.166 1.203-.275 1.485a2.47 2.47 0 0 1-.599.919c-.28.28-.546.453-.92.598-.28.11-.704.24-1.485.276-.843.038-1.096.047-3.232.047s-2.39-.009-3.233-.047c-.78-.036-1.203-.166-1.485-.276a2.478 2.478 0 0 1-.92-.598 2.48 2.48 0 0 1-.6-.92c-.109-.281-.24-.705-.275-1.485-.038-.843-.046-1.096-.046-3.233 0-2.136.008-2.388.046-3.231.036-.78.166-1.204.276-1.486.145-.373.319-.64.599-.92.28-.28.546-.453.92-.598.282-.11.705-.24 1.485-.276.738-.034 1.024-.044 2.515-.045v.002zm4.988 1.328a.96.96 0 1 0 0 1.92.96.96 0 0 0 0-1.92zm-4.27 1.122a4.109 4.109 0 1 0 0 8.217 4.109 4.109 0 0 0 0-8.217zm0 1.441a2.667 2.667 0 1 1 0 5.334 2.667 2.667 0 0 1 0-5.334z"/>
-                            </svg></a></li>
-                    <li class="ms-3"><a class="text-body-secondary" href="#"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="currentColor" class="bi bi-facebook" viewBox="0 0 16 16">
-                                <path d="M16 8.049c0-4.446-3.582-8.05-8-8.05C3.58 0-.002 3.603-.002 8.05c0 4.017 2.926 7.347 6.75 7.951v-5.625h-2.03V8.05H6.75V6.275c0-2.017 1.195-3.131 3.022-3.131.876 0 1.791.157 1.791.157v1.98h-1.009c-.993 0-1.303.621-1.303 1.258v1.51h2.218l-.354 2.326H9.25V16c3.824-.604 6.75-3.934 6.75-7.951z"/>
-                            </svg></a></li>
-                </ul>
-            </footer>
     </div>
-
-{% endblock %}
+</div>
+<script src="{{ asset('build/banners/banners.js') }}"></script>
+{% endblock  %}

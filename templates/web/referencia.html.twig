@@ -1,0 +1,272 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}Nova Training{% endblock %}
+
+{% block body %}
+    {# BANNER #}
+    <div class="container">
+        <div class="text-center">
+            <img src="{{ asset("build/images/banner_nova.png") }}" class="img-fluid" alt="">
+        </div>
+    </div>
+    
+    {# PRESENTACION #}
+    <div class="container my-5">
+        <p class="col-lg-8 mx-auto lead">
+            Somos una consultora que se desempeña en el área de gestión organizacional, impulsando el
+            crecimiento a partir de Integrar nuevas experiencias, asistimos a personas, equipos y organizaciones a
+            desarrollar pasión, propósito y compromiso para alcanzar los resultados que se proponen.
+        </p>
+    </div>
+    
+    {# Cards Servicios #}
+    <div class="container my-5">
+        <div class="row row-cols-1 row-cols-md-4 g-4">
+            <div class="col">
+                <div class="card">
+                    <img src="{{ asset("build/images/nova_panel.jpg") }}" class="card-img-top img-fluid servicio-img" alt="...">
+                    
+                </div>
+            </div>
+            <div class="col">
+                <div class="card">
+                    <img src="{{ asset("build/images/nova_coaching.jpg") }}"  class="card-img-top img-fluid servicio-img" alt="...">
+
+                </div>
+            </div>
+            <div class="col">
+                <div class="card">
+                    <img src="{{ asset("build/images/nova_lideres.jpg") }}" class="card-img-top img-fluid servicio-img" alt="...">
+
+                </div>
+            </div>
+            <div class="col">
+                <div class="card">
+                    <img src="{{ asset("build/images/nova_guide.jpg") }}"  class="card-img-top img-fluid servicio-img" alt="...">
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="container my-3">
+        <div class="row"> {# flex-lg-row-reverse #}
+            <div class="col-6">
+                <h1 class="display-5 fw-bold text-body-emphasis lh-1 mb-3">NOVA LIDERES</h1>
+                <p class="lead">Quickly design and customize responsive mobile-first sites with Bootstrap, the world’s most popular front-end open source toolkit, featuring Sass variables and mixins, responsive grid system, extensive prebuilt components, and powerful JavaScript plugins.</p>
+                <div class="d-grid gap-2 d-md-flex justify-content-md-start">
+                    <button type="button" class="btn btn-primary btn-lg px-4 me-md-2">Demo Online</button>
+                    <button type="button" class="btn btn-outline-secondary btn-lg px-4">Precios</button>
+                </div>
+            </div>
+            <div class="col-6">
+                <img src="{{ asset('build/images/nova_lideres.jpg') }}" style="height: 500px !important;">
+            </div>
+        </div>
+    </div>
+
+    <div class="container my-3">
+        <div class="row">
+            <div class="col-6">
+                <h1 class="display-5 fw-bold text-body-emphasis lh-1 mb-3">NOVA PANEL</h1>
+                <p class="lead">Quickly design and customize responsive mobile-first sites with Bootstrap, the world’s most popular front-end open source toolkit, featuring Sass variables and mixins, responsive grid system, extensive prebuilt components, and powerful JavaScript plugins.</p>
+                <div class="d-grid gap-2 d-md-flex justify-content-md-start">
+                    <button type="button" class="btn btn-primary btn-lg px-4 me-md-2">Demo Online</button>
+                    <button type="button" class="btn btn-outline-secondary btn-lg px-4">Precios</button>
+                </div>
+            </div>
+             <div class="col-6">
+                <img src="{{ asset('build/images/nova_panel_2.jpg') }}" style="height: 500px !important;">
+            </div>
+        </div>
+    </div>
+
+    <div class="container my-5">
+        <h2 class="pb-2 border-bottom">Nuestras Soluciones</h2>
+        <div class="row row-cols-1 row-cols-sm-2 g-4">
+            <div class="col d-flex flex-column gap-2">
+                <div class="feature-icon-small d-inline-flex align-items-center justify-content-center text-bg-primary bg-gradient fs-4 rounded-3">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="1em" height="1em" fill="currentColor" class="bi bi-toggles2" viewBox="0 0 16 16">
+                        <path d="M9.465 10H12a2 2 0 1 1 0 4H9.465c.34-.588.535-1.271.535-2 0-.729-.195-1.412-.535-2z"/>
+                        <path d="M6 15a3 3 0 1 0 0-6 3 3 0 0 0 0 6zm0 1a4 4 0 1 1 0-8 4 4 0 0 1 0 8zm.535-10a3.975 3.975 0 0 1-.409-1H4a1 1 0 0 1 0-2h2.126c.091-.355.23-.69.41-1H4a2 2 0 1 0 0 4h2.535z"/>
+                        <path d="M14 4a4 4 0 1 1-8 0 4 4 0 0 1 8 0z"/>
+                    </svg>
+                </div>
+                <h4 class="fw-semibold mb-0">Auditorias de Calidad</h4>
+                <p class="text-body-secondary">Paragraph of text beneath the heading to explain the heading.</p>
+            </div>
+            <div class="col d-flex flex-column gap-2">
+                <div class="feature-icon-small d-inline-flex align-items-center justify-content-center text-bg-primary bg-gradient fs-4 rounded-3">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="1em" height="1em" fill="currentColor" class="bi bi-cpu-fill" viewBox="0 0 16 16">
+                        <path d="M6.5 6a.5.5 0 0 0-.5.5v3a.5.5 0 0 0 .5.5h3a.5.5 0 0 0 .5-.5v-3a.5.5 0 0 0-.5-.5h-3z"/>
+                        <path d="M5.5.5a.5.5 0 0 0-1 0V2A2.5 2.5 0 0 0 2 4.5H.5a.5.5 0 0 0 0 1H2v1H.5a.5.5 0 0 0 0 1H2v1H.5a.5.5 0 0 0 0 1H2v1H.5a.5.5 0 0 0 0 1H2A2.5 2.5 0 0 0 4.5 14v1.5a.5.5 0 0 0 1 0V14h1v1.5a.5.5 0 0 0 1 0V14h1v1.5a.5.5 0 0 0 1 0V14h1v1.5a.5.5 0 0 0 1 0V14a2.5 2.5 0 0 0 2.5-2.5h1.5a.5.5 0 0 0 0-1H14v-1h1.5a.5.5 0 0 0 0-1H14v-1h1.5a.5.5 0 0 0 0-1H14v-1h1.5a.5.5 0 0 0 0-1H14A2.5 2.5 0 0 0 11.5 2V.5a.5.5 0 0 0-1 0V2h-1V.5a.5.5 0 0 0-1 0V2h-1V.5a.5.5 0 0 0-1 0V2h-1V.5zm1 4.5h3A1.5 1.5 0 0 1 11 6.5v3A1.5 1.5 0 0 1 9.5 11h-3A1.5 1.5 0 0 1 5 9.5v-3A1.5 1.5 0 0 1 6.5 5z"/>
+                    </svg>
+                </div>
+                <h4 class="fw-semibold mb-0">Desarrollo de Perfiles y Seleccion de Personal</h4>
+                <p class="text-body-secondary">Paragraph of text beneath the heading to explain the heading.</p>
+            </div>
+            <div class="col d-flex flex-column gap-2">
+                <div class="feature-icon-small d-inline-flex align-items-center justify-content-center text-bg-primary bg-gradient fs-4 rounded-3">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="1em" height="1em" fill="currentColor" class="bi bi-tools" viewBox="0 0 16 16">
+                        <path d="M1 0 0 1l2.2 3.081a1 1 0 0 0 .815.419h.07a1 1 0 0 1 .708.293l2.675 2.675-2.617 2.654A3.003 3.003 0 0 0 0 13a3 3 0 1 0 5.878-.851l2.654-2.617.968.968-.305.914a1 1 0 0 0 .242 1.023l3.27 3.27a.997.997 0 0 0 1.414 0l1.586-1.586a.997.997 0 0 0 0-1.414l-3.27-3.27a1 1 0 0 0-1.023-.242L10.5 9.5l-.96-.96 2.68-2.643A3.005 3.005 0 0 0 16 3c0-.269-.035-.53-.102-.777l-2.14 2.141L12 4l-.364-1.757L13.777.102a3 3 0 0 0-3.675 3.68L7.462 6.46 4.793 3.793a1 1 0 0 1-.293-.707v-.071a1 1 0 0 0-.419-.814L1 0Zm9.646 10.646a.5.5 0 0 1 .708 0l2.914 2.915a.5.5 0 0 1-.707.707l-2.915-2.914a.5.5 0 0 1 0-.708ZM3 11l.471.242.529.026.287.445.445.287.026.529L5 13l-.242.471-.026.529-.445.287-.287.445-.529.026L3 15l-.471-.242L2 14.732l-.287-.445L1.268 14l-.026-.529L1 13l.242-.471.026-.529.445-.287.287-.445.529-.026L3 11Z"/>
+                    </svg>
+                </div>
+                <h4 class="fw-semibold mb-0">Implementacion Proceso de Mejora</h4>
+                <p class="text-body-secondary">Paragraph of text beneath the heading to explain the heading.</p>
+            </div>
+            <div class="col d-flex flex-column gap-2">
+                <div class="feature-icon-small d-inline-flex align-items-center justify-content-center text-bg-primary bg-gradient fs-4 rounded-3">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="1em" height="1em" fill="currentColor" class="bi bi-speedometer" viewBox="0 0 16 16">
+                        <path d="M8 2a.5.5 0 0 1 .5.5V4a.5.5 0 0 1-1 0V2.5A.5.5 0 0 1 8 2zM3.732 3.732a.5.5 0 0 1 .707 0l.915.914a.5.5 0 1 1-.708.708l-.914-.915a.5.5 0 0 1 0-.707zM2 8a.5.5 0 0 1 .5-.5h1.586a.5.5 0 0 1 0 1H2.5A.5.5 0 0 1 2 8zm9.5 0a.5.5 0 0 1 .5-.5h1.5a.5.5 0 0 1 0 1H12a.5.5 0 0 1-.5-.5zm.754-4.246a.389.389 0 0 0-.527-.02L7.547 7.31A.91.91 0 1 0 8.85 8.569l3.434-4.297a.389.389 0 0 0-.029-.518z"/>
+                        <path fill-rule="evenodd" d="M6.664 15.889A8 8 0 1 1 9.336.11a8 8 0 0 1-2.672 15.78zm-4.665-4.283A11.945 11.945 0 0 1 8 10c2.186 0 4.236.585 6.001 1.606a7 7 0 1 0-12.002 0z"/>
+                    </svg>
+                </div>
+                <h4 class="fw-semibold mb-0">Consultoria</h4>
+                <p class="text-body-secondary">Paragraph of text beneath the heading to explain the heading.</p>
+            </div>
+        </div>
+    </div>    
+
+    <div class="container my-5">
+        <div class="row g-5">
+            <div class="col-md-6">
+                <h2 class="text-body-emphasis">Valores</h2>
+                <p>Ready to beyond the starter template? Check out these open source projects that you can quickly duplicate to a new GitHub repository.</p>
+                <ul class="list-unstyled ps-0">
+                    <li>
+                        <a class="icon-link mb-1" href="#" rel="noopener" target="_blank">
+                            <svg class="bi" width="16" height="16"><use xlink:href="#arrow-right-circle"/></svg>
+                            INTEGRIDAD
+                        </a>
+                    </li>
+                    <li>
+                        <a class="icon-link mb-1" href="#" rel="noopener" target="_blank">
+                            <svg class="bi" width="16" height="16"><use xlink:href="#arrow-right-circle"/></svg>
+                            CONFIDENCIALIDAD
+                        </a>
+                    </li>
+                    <li>
+                        <a class="icon-link mb-1" href="#" rel="noopener" target="_blank">
+                            <svg class="bi" width="16" height="16"><use xlink:href="#arrow-right-circle"/></svg>
+                            DISCRECIÓN
+                        </a>
+                    </li>
+                    <li>
+                        <a class="icon-link mb-1" href="#" rel="noopener" target="_blank">
+                            <svg class="bi" width="16" height="16"><use xlink:href="#arrow-right-circle"/></svg>
+                            COMPROMISO
+                        </a>
+                    </li>
+                    <li>
+                        <a class="icon-link mb-1" href="#" rel="noopener" target="_blank">
+                            <svg class="bi" width="16" height="16"><use xlink:href="#arrow-right-circle"/></svg>
+                            INNOVACIÓN
+                        </a>
+                    </li>
+                    <li>
+                        <a class="icon-link mb-1" href="#" rel="noopener" target="_blank">
+                            <svg class="bi" width="16" height="16"><use xlink:href="#arrow-right-circle"/></svg>
+                            ORIENTACIÓN AL RESULTADO
+                        </a>
+                    </li>
+                    <li>
+                        <a class="icon-link mb-1" href="#" rel="noopener" target="_blank">
+                            <svg class="bi" width="16" height="16"><use xlink:href="#arrow-right-circle"/></svg>
+                            ORIENTACIÓN AL CLIENTE
+                        </a>
+                    </li>
+                </ul>
+            </div>
+            <div class="col-md-6">
+                <h2 class="text-body-emphasis">BENEFICIOS DE NOVA</h2>
+                <p>Read more detailed instructions and documentation on using or contributing to Bootstrap.</p>
+                <ul class="list-unstyled ps-0">
+                    <li>
+                        <a class="icon-link mb-1" href="#">
+                            <svg class="bi" width="16" height="16"><use xlink:href="#arrow-right-circle"/></svg>
+                            Información de manera inmediata
+                        </a>
+                    </li>
+                    <li>
+                        <a class="icon-link mb-1" href="#">
+                            <svg class="bi" width="16" height="16"><use xlink:href="#arrow-right-circle"/></svg>
+                            Facilita la toma de decisiones
+                        </a>
+                    </li>
+                    <li>
+                        <a class="icon-link mb-1" href="#">
+                            <svg class="bi" width="16" height="16"><use xlink:href="#arrow-right-circle"/></svg>
+                            Permite detectar desvíos y decidir las medidas correctivas
+                        </a>
+                    </li>
+                    <li>
+                        <a class="icon-link mb-1" href="#">
+                            <svg class="bi" width="16" height="16"><use xlink:href="#arrow-right-circle"/></svg>
+                            Mide el desempeño de nuestros colaboradores
+                        </a>
+                    </li>
+                    <li>
+                        <a class="icon-link mb-1" href="#">
+                            <svg class="bi" width="16" height="16"><use xlink:href="#arrow-right-circle"/></svg>
+                            Medir los avances y cumplimiento
+                        </a>
+                    </li>
+                    <li>
+                        <a class="icon-link mb-1" href="#">
+                            <svg class="bi" width="16" height="16"><use xlink:href="#arrow-right-circle"/></svg>
+                            Información de manera inmediata
+                        </a>
+                    </li>
+                    <li>
+                        <a class="icon-link mb-1" href="#">
+                            <svg class="bi" width="16" height="16"><use xlink:href="#arrow-right-circle"/></svg>
+                            Facilita la toma de decisiones
+                        </a>
+                    </li>
+                    <li>
+                        <a class="icon-link mb-1" href="#">
+                            <svg class="bi" width="16" height="16"><use xlink:href="#arrow-right-circle"/></svg>
+                            Permite detectar desvíos y decidir las medidas correctivas.
+                        </a>
+                    </li>
+                    <li>
+                        <a class="icon-link mb-1" href="#">
+                            <svg class="bi" width="16" height="16"><use xlink:href="#arrow-right-circle"/></svg>
+                            Mide el desempeño de nuestros colaboradores
+                        </a>
+                    </li>
+                    <li>
+                        <a class="icon-link mb-1" href="#">
+                            <svg class="bi" width="16" height="16"><use xlink:href="#arrow-right-circle"/></svg>
+                            Medir los avances y cumplimiento
+                        </a>
+                    </li>
+                    <li>
+                        <a class="icon-link mb-1" href="#">
+                            <svg class="bi" width="16" height="16"><use xlink:href="#arrow-right-circle"/></svg>
+                            Optimización de los recursos
+                        </a>
+                    </li>
+                    <li>
+                        <a class="icon-link mb-1" href="#">
+                            <svg class="bi" width="16" height="16"><use xlink:href="#arrow-right-circle"/></svg>
+                            Incremento en las ventas
+                        </a>
+                    </li>
+                    <li>
+                        <a class="icon-link mb-1" href="#">
+                            <svg class="bi" width="16" height="16"><use xlink:href="#arrow-right-circle"/></svg>
+                            Integrar el plan estratégico de la empresa con los planes de la compañía
+                        </a>
+                    </li>
+                    <li>
+                        <a class="icon-link mb-1" href="#">
+                            <svg class="bi" width="16" height="16"><use xlink:href="#arrow-right-circle"/></svg>
+                            Todo en un solo sitio
+                        </a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </div>
+
+{% endblock %}
