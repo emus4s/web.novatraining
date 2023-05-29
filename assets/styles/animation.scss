@@ -1,0 +1,128 @@
+$primary: #00afd9;
+
+/** Zoom Image Background **/
+.zoom{ overflow: hidden; }
+.zoom div{ transition: all 1.5s ease; }
+.zoom:hover div{ transform: scale(1.2); }
+/** End Zoom Image Background **/
+
+/** Border Fade **/
+.hover-border:hover, .hvr-border-fade:focus, .hvr-border-fade:active {
+  transition: 0.25s ease;
+  box-shadow: 0 0 0 5px $primary !important;
+}
+/** End Border Fade **/
+
+/**  Shadow Hover **/
+.hover-shadow:hover { box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.15) !important; }
+/**  End Shadow **/
+
+/** Pulse Item **/
+@-webkit-keyframes pulse-item {
+  25% { transform: scale(1.1); }
+  75% { transform: scale(0.9); }
+}
+@keyframes pulse-item {
+  25% { transform: scale(1.1); }
+  75% { transform: scale(0.9); }
+}
+.pulse .pulse-item {
+  display: inline-block;
+  vertical-align: middle;
+  -webkit-transform: perspective(1px) translateZ(0);
+  transform: perspective(1px) translateZ(0);
+  box-shadow: 0 0 1px rgba(0, 0, 0, 0);
+}
+.pulse:hover .pulse-item {
+  animation-name: pulse-item;
+  animation-duration: 1.5s;
+  animation-timing-function: linear;
+  animation-iteration-count: infinite;
+}
+/** End Pulse Item **/
+
+/** Pulse **/
+@-webkit-keyframes hover-pulse {
+  25% { transform: scale(1.1); }
+  75% { transform: scale(0.9); }
+}
+@keyframes hover-pulse {
+  25% { transform: scale(1.1); }
+  75% { transform: scale(0.9); }
+}
+.hover-pulse {
+  display: inline-block;
+  vertical-align: middle;
+  transform: perspective(1px) translateZ(0);
+  box-shadow: 0 0 1px rgba(0, 0, 0, 0);
+}
+.hover-pulse:hover {
+  animation-name: hover-pulse;
+  animation-duration: 3s;
+  animation-timing-function: linear;
+  animation-iteration-count: infinite;
+}
+/** End Pulse **/
+
+/** Float **/
+.hover-float {
+  display: inline-block;
+  vertical-align: middle;
+  transform: perspective(1px) translateZ(0);
+  transition-duration: 0.3s;
+  transition-property: transform;
+  transition-timing-function: ease-out;
+}
+.hover-float:hover, .hover-float:focus, .hover-float:active { transform: translateY(-10px); }
+/** End Float **/
+
+/** Displace Right **/
+.displace-right-primary {
+  display: inline-block;
+  vertical-align: middle;
+  transform: perspective(1px) translateZ(0);
+  box-shadow: 0 0 1px rgba(0, 0, 0, 0);
+  position: relative;
+  transition-property: color;
+  transition-duration: 0.4s;
+}
+.displace-right-primary:before {
+  content: "";
+  position: absolute;
+  z-index: -1;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: darken($primary, 10%);
+  transform: scaleX(0);
+  transform-origin: left;
+  transition-property: transform;
+  transition-duration: 0.4s;
+  transition-timing-function: ease-out;
+  border-radius: 8px;
+}
+.displace-right-primary:hover:before, .displace-right-primary:focus:before, .displace-right-primary:active:before { transform: scaleX(1); }
+/** End Displace Right **/
+
+/** Underline Reveal **/
+.hvr-underline-reveal::after {
+  content: '';
+  position: absolute;
+  width: 100%;
+  height: 0.5rem;
+  left: 0;
+  bottom: 0;
+  background: $primary;
+  cursor: pointer;
+  border-radius: 0px 0px 10% 10%;
+}
+.hvr-underline-reveal::after {
+  transform: scale(0, 1);
+  transform-origin: center;
+  transition: transform 0.3s ease;
+}
+.hvr-underline-reveal:hover::after { transform: scale(1, 1.25); }
+/** End Underline Reveal **/
+
+/** Banners **/

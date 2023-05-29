@@ -1,0 +1,39 @@
+// $primary: #606bc0;
+// $secondary: #dededc;
+
+@import "bootstrap/scss/bootstrap";
+@import "~bootstrap-icons";
+@import url("https://cdn.jsdelivr.net/npm/bootstrap-icons@1.8.1/font/bootstrap-icons.css");
+// Widgets
+@import "./widgets/banner.scss";
+@import "./widgets/banner-container.scss";
+@import "./widgets/card-icon.scss";
+// Fonts 
+@import url('https://fonts.googleapis.com/css2?family=Oxanium:wght@200;300;400;500;600;700;800&display=swap');
+// Animations
+@import "./animation.scss";
+
+body{
+    background-color: #fafbfe;
+}
+
+.border-radius-0 { border-radius: 0px; }
+
+/*Features*/
+.feature-icon { width: 4rem; height: 4rem; border-radius: .75rem; }
+
+.feature-icon-small { width: 3rem; height: 3rem; }
+
+.servicio-img{ width: 300px; height: 300px; }
+
+.text-justify { text-align: justify; }
+
+.text-nova{ font-family: 'Oxanium'; }
+
+.btn-outline-light:hover {
+    color: #1b76fd;
+}
+.nav-link:hover{
+    color: #ffffff;
+    background-color: #1b76fd;
+}

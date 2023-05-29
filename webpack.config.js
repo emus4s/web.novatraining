@@ -18,7 +18,14 @@ Encore
         {
             from: './assets/images',
             to: 'images/[path][name].[ext]',
-            pattern: /\.(png|jpg|jpeg)$/
+            //pattern: /\.(png|jpg|jpeg)$/
+        }
+    )
+    
+    .copyFiles(
+        {
+            from: './assets/banners',
+            to: 'banners/[path][name].[ext]'
         }
     )
 
@@ -65,7 +72,7 @@ Encore
     })
 
     // enables Sass/SCSS support
-    //.enableSassLoader()
+    .enableSassLoader()
 
     // uncomment if you use TypeScript
     //.enableTypeScriptLoader()

@@ -1,0 +1,34 @@
+.card-icon{
+    display: flex !important;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: 255px;
+    border-radius: 0.5rem;
+    padding: 10%;
+    background-color: #ffffff;
+    border: 1px solid #d2d2d2;
+}
+.card-icon > .body{
+    width: 100% !important;
+}
+.card-icon > .body > .icon {
+    height: 140px;
+    color: $primary;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 0.5rem;
+}
+
+.card-icon > .body > .text {
+    font-family: 'Oxanium'; 
+    text-align: center;
+    color: $secondary;
+}
+
+
+@media (min-width: 1384px) { 
+    .card-icon{ height: 300px; }
+    .card-icon > .body > .icon { height: 160px; }
+}

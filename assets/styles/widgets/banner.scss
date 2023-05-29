@@ -1,0 +1,103 @@
+.banner{
+    height: 160px;
+    width: 100%;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+  }
+  .banner-animation {
+    height: 160px;
+    width: 100%;
+  }
+  
+  .banner > .body {
+    height: 100%;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    padding-left: 3%;
+    padding-right: 3%;
+  }
+  .banner > .body > .content {
+    max-width: 50%;
+  }
+  
+  .banner > .left {
+    justify-content: left;
+  }
+  .banner > .center {
+    justify-content: center;
+  }
+  .banner > .right {
+    justify-content: right;
+  }
+  
+  
+  @media (min-width: 320px) {
+    .banner { height: 180px; }
+    .banner-animation { height: 180px; }
+  
+    .banner > .body > .content { max-width: 45%; }
+  }
+  @media (min-width: 400px) {
+    .banner { height: 200px; }
+    .banner-animation { height: 200px; }
+  }
+  @media (min-width: 512px) {
+    .banner { height: 200px; }
+    .banner-animation { height: 200px; }
+  }
+  @media (min-width: 640px) {
+    .banner { height: 168px; }
+    .banner-animation { height: 168px; }
+  
+    .banner > .body > .content { max-width: 35%; }
+  }
+  @media (min-width: 720px) {
+    .banner { height: 189px; }
+    .banner-animation { height: 189px; }
+  }
+  @media (min-width: 800px) {
+    .banner { height: 210px; }
+    .banner-animation { height: 210px; }
+    .banner > .body {  padding-left: 6%; padding-right: 6%; }
+  }
+  @media (min-width: 960px) {
+    .banner { height: 252px; }
+    .banner-animation { height: 252px; }
+    .banner > .body {  padding-left: 8%; padding-right: 8%; }
+  }
+  @media (min-width: 1024px) {
+    .banner { height: 269px; }
+    .banner-animation { height: 269px; }
+    .banner > .body > .content > .title-lg {  font-size: 3.5rem;  }
+  }
+  @media (min-width: 1152px) {
+    .banner { height: 302px; }
+    .banner-animation { height: 302px; }
+  }
+  @media (min-width: 1280px) {
+    .banner { height: 354px; }
+    .banner-animation { height: 353px; }
+  }
+  @media (min-width: 1360px) {
+    .banner { height: 354px; }
+    .banner-animation { height: 353px; }
+  }
+  @media (min-width: 1440px) {
+    .banner { height: 374px; }
+    .banner-animation { height: 374px; }
+  }
+  @media (min-width: 1600px) {
+    .banner { height: 437px; }
+    .banner-animation { height: 437px; }
+  }
+  @media (min-width: 1768px) {
+    .banner { height: 460px; }
+    .banner-animation { height: 460px; }
+  }
+  @media (min-width: 1920px) {
+    .banner { height: 500px; }
+    .banner-animation { height: 500px; }
+  }
+  
