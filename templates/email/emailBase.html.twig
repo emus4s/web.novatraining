@@ -1,0 +1,49 @@
+{% apply inky_to_html|inline_css(encore_entry_css_source('email_nova')) %}
+    <container class="header">
+        <row >
+            <columns >
+                <center>
+                    <img src="{{ email.image('@images/logo_nova.png') }}" class="logo" alt="Logo Nova Training">
+                </center>
+            </columns>
+        </row>
+    </container>
+
+    <container class="header">
+        <row>
+            <columns>
+                <p class="text-center">{{ titulo }}</p>
+            </columns>
+        </row>
+    </container>
+
+    <container class="body-border" >
+        {% block content %}{% endblock %}
+    </container>
+
+    <container>
+
+        <row class="row-border">
+            <columns>
+                <spacer size="20"></spacer>
+                    <menu class="vertical">
+                        <item href="#">Más información en: Datos Comunicacion 1</item>
+                        <item href="#">Whatsapp: 2966 222222222</item>
+                    </menu>
+            </columns>
+        </row>
+
+        <row class="bottom">
+            <columns>
+                <spacer size="20"></spacer>
+                <center>
+                    <menu>
+                        <item>Nova Training</item>
+                    </menu>
+                </center>
+
+            </columns>
+        </row>
+
+    </container>
+{% endapply %}

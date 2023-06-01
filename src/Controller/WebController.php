@@ -3,13 +3,22 @@
 namespace App\Controller;
 
 use App\Form\ContactType;
+use App\Service\Mailer;
 use Symfony\Bundle\FrameworkBundle\Controller\AbstractController;
 use Symfony\Component\HttpFoundation\Request;
 use Symfony\Component\HttpFoundation\Response;
+use Symfony\Component\Mailer\Exception\TransportExceptionInterface;
 use Symfony\Component\Routing\Annotation\Route;
 
 class WebController extends AbstractController
 {
+    private Mailer $mailer;
+
+    public function __construct(Mailer $mailer)
+    {
+        $this->mailer = $mailer;
+    }
+
     #[Route('/', name: 'app_web')]
     public function index(): Response
     {
@@ -42,13 +51,35 @@ class WebController extends AbstractController
             //dd($nombre);
 
             #TODO: Enviar Email Consulta a Nova y enviar Email de Notificacion al Consultante sync
+            try {
+                $this->mailer->sendEmailContact($email);
 
-            #Redireccinar al formualrio de consulta con mensaje succes
-            return $this->redirectToRoute('contact_succes');
+                $this->addFlash(
+                    'success',
+                    'Tu mensaje fue enviado con exito'
+                );
+
+            } catch (\Exception $e) {
+                //$this->logger->error($e->getMessage());
+                //dd($e);
+                $this->addFlash(
+                    'danger',
+                    'No pudimos enviar tu mensaje, intentelo mas tarde ...'
+                );
+
+            }
+
+            return $this->redirectToRoute('app_web_contact_email');
         }
 
         return $this->render('web/contact.html.twig', [
             'form' => $form,
         ]);
+    }
+
+    #[Route('/contacto/email', name: 'app_web_contact_email')]
+    public function successSendEmailContact()
+    {
+        return $this->render('web/contact_email_message.html.twig');
     }
 }

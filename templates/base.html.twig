@@ -1,6 +1,6 @@
 <!DOCTYPE html>
 <!DOCTYPE html>
-<html class="h-100">
+<html class="h-100" lang="es">
     <head>
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1">
@@ -28,7 +28,7 @@
                     </button>
                     <div class="collapse navbar-collapse" id="navbarSupportedContent">
                         <ul class="navbar-nav ms-auto mb-4 mb-lg-0  mt-4 mt-lg-0 d-flex align-items-start align-items-lg-center">
-                            <li class="mx-2"><a href="#" class="nav-link px-2">Inicio</a></li>
+                            <li class="mx-2"><a href="{{ path('app_web') }}" class="nav-link px-2">Inicio</a></li>
                             <li class="mx-2"><a href="#" class="nav-link px-2">Soluciones</a></li>
                             <li class="mx-2"><a href="{{ path('app_web_contact') }}" class="nav-link px-2">Contacto</a></li>
                             <li class="mx-2"><a href="#" class="nav-link px-2">FAQs</a></li>
@@ -106,7 +106,6 @@
                 </li>
             </ul>
             #}
-            </div>
         </footer>
         <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
         <script> AOS.init(); </script>
