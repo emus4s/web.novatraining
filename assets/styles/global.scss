@@ -1,5 +1,6 @@
 // $primary: #606bc0;
 // $secondary: #dededc;
+$primary: #152137;
 
 @import "bootstrap/scss/bootstrap";
 @import "~bootstrap-icons";
@@ -31,9 +32,9 @@ body{
 .text-nova{ font-family: 'Oxanium'; }
 
 .btn-outline-light:hover {
-    color: #1b76fd;
+    color: #152137;
 }
 .nav-link:hover{
     color: #ffffff;
-    background-color: #1b76fd;
+    background-color: #4c67af;
 }

@@ -1,32 +1,36 @@
 {% extends 'base.html.twig' %}
-
+{% block stylesheets %}
+    <link rel="stylesheet" href="{{ asset('build/css/form.css') }}"/>
+{% endblock %}
 {% block body %}
-    <div class="row g-5">
-        <div class="col-8">
-    {{ form_start(form, {'attr': {'novalidate': 'novalidate'}}) }}
-    <div class="row">
-        <div class="col-6">
-            {{ form_row(form.nombre) }}
-        </div>
-        <div class="col-6">
-            {{ form_row(form.apellido) }}
-        </div>
-        <div class="col-6">
-            {{ form_row(form.telefono) }}
-        </div>
-        <div class="col-6">
-            {{ form_row(form.email) }}
-        </div>
-        <div class="col-12">
-            {{ form_row(form.mensaje) }}
-        </div>
-    </div>
-
-    {{ form_end(form) }}
-        </div>
+    <div class="container my-5">
+        {{ form_start(form, {'attr': {'novalidate': 'novalidate'}}) }}
+            <fieldset class="shadow">
+                <legend>Formulario de contacto</legend>
+                <div class="row">
+                    <div class="col-md-6">
+                        {{ form_row(form.nombre) }}
+                    </div>
+                    <div class="col-md-6">
+                        {{ form_row(form.apellido) }}
+                    </div>
+                    <div class="col-md-6">
+                        {{ form_row(form.telefono) }}
+                    </div>
+                    <div class="col-md-6">
+                        {{ form_row(form.email) }}
+                    </div>
+                    <div class="col-12">
+                        {{ form_row(form.mensaje) }}
+                    </div>
+                    <div class="col-12">
+                        <button class="btn btn-primary btn-lg w-100" type"submit">Enviar</button>
+                    </div>
+                </div>
+            </fieldset>
+        {{ form_end(form) }}
     </div>
 {% endblock %}
-
 {% block title %}
     Consultas
 {% endblock %}

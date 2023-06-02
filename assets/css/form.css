@@ -1,0 +1,32 @@
+fieldset, legend {
+    all: revert;
+}
+
+fieldset {
+    background-color: white;
+    padding: 3rem 4rem 3rem 4rem;
+    border-radius: 0.75rem;
+    border: 1px solid #dfdfdf;
+}
+
+legend{
+    color: #6c757d;
+    font-size: 1.75rem;
+    padding-right: 1rem;
+    padding-left: 1rem;
+}
+
+input.form-control {
+    height: 50px;
+    border-radius: 0px;
+}
+
+textarea.form-control {
+    height: 150px;
+    border-radius: 0px;
+}
+
+button.btn {
+    height: 50px;
+    border-radius: 0px;
+}
