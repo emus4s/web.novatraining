@@ -1,6 +1,6 @@
 // $primary: #606bc0;
 // $secondary: #dededc;
-$primary: #152137;
+$primary: #154e9c;
 
 @import "bootstrap/scss/bootstrap";
 @import "~bootstrap-icons";
@@ -14,9 +14,7 @@ $primary: #152137;
 // Animations
 @import "./animation.scss";
 
-body{
-    background-color: #fafbfe;
-}
+body{ background-color: #fafbfe; }
 
 .border-radius-0 { border-radius: 0px; }
 
