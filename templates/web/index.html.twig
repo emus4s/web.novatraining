@@ -6,47 +6,43 @@
 {% endblock %}
 {% block body %}
 {# CARROUSEL #}
-<div class="row mb-5">
-    <div id="carousel" class="carousel slide shadow">
-        <div class="carousel-indicators">
-            <button type="button" data-bs-target="#carouselIndicators" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
-            <button type="button" data-bs-target="#carouselIndicators" data-bs-slide-to="1" aria-label="Slide 2"></button>
-            <button type="button" data-bs-target="#carouselIndicators" data-bs-slide-to="2" aria-label="Slide 3"></button>
-        </div>
-        <div class="carousel-inner">
-            <div class="carousel-item active">
-                <div class="banner d-flex align-items-center justify-content-center" style="background-color: #ffffff;">
-                    <img src="{{ asset('build/images/neon/1.jpg') }}" style="max-height: 100%;">
-                </div>
-            </div>
-            <div class="carousel-item">
-                <div class="banner d-flex align-items-center justify-content-center" style="background-color: #081f2f;">
-                    <img src="{{ asset('build/images/neon/2.jpg') }}" style="max-height: 100%;">
-                </div>
-            </div>
-            <div class="carousel-item">
-                <div class="banner d-flex align-items-center justify-content-center" style="background-color: #3b7bc2;">
-                    <img src="{{ asset('build/images/neon/3.jpg') }}" style="max-height: 100%;">
-                </div>
-            </div>
-        </div>
-          <button class="carousel-control-prev" type="button" data-bs-target="#carousel" data-bs-slide="prev">
-            <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-            <span class="visually-hidden">Previous</span>
-        </button>
-        <button class="carousel-control-next" type="button" data-bs-target="#carousel" data-bs-slide="next">
-            <span class="carousel-control-next-icon" aria-hidden="true"></span>
-            <span class="visually-hidden">Next</span>
-        </button>
-
+<div id="carousel" class="carousel slide" style="max-width: 100%;">
+   {# 
+    <div class="carousel-indicators">
+        <button type="button" data-bs-target="#carousel" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
+        <button type="button" data-bs-target="#carousel" data-bs-slide-to="1" aria-label="Slide 2"></button>
+        <button type="button" data-bs-target="#carousel" data-bs-slide-to="2" aria-label="Slide 3"></button>
     </div>
+    #}
+    <div class="carousel-inner">
+        <div class="carousel-item active">
+            <div class="banner row g-0" style="background-color: #081f2f;">
+                <div class="col-6">
+                    <img  class="banner"src="{{ asset('build/images/banners/nova-training-new/1.png') }}"/>
+                </div>
+                <div class="col-6">
+                    <img  class="banner"src="{{ asset('build/images/banners/nova-training-new/2.png') }}"/>
+                </div>
+            </div>
+        </div>
+    </div>
+    {#
+    <button class="carousel-control-prev" type="button" data-bs-target="#carousel" data-bs-slide="prev">
+        <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+        <span class="visually-hidden">Previous</span>
+    </button>
+    <button class="carousel-control-next" type="button" data-bs-target="#carousel" data-bs-slide="next">
+        <span class="carousel-control-next-icon" aria-hidden="true"></span>
+        <span class="visually-hidden">Next</span>
+    </button>
 </div>
+
 {# CARD ICON  #}
 <div class="container-fluid py-5">
    <div class="row px-5">
         {% for i in 0..3 %}
         <div class="col-3">        
-            <div class="bg-white border hover-shadow" style="aspect-ratio: 1/1; border-radius: 1rem; height: 100%; width: 100%; padding: 8%;">
+            <div class="bg-white border hover-shadow" style="aspect-ratio: 1/1; border-radius: 1rem; padding: 8%;">
                 <div class="h-100 w-100">
                     <div class="h-25 d-flex align-items-center justify-content-center">
                         <svg class="h-100" style="max-height: 100%; color: #4c67af;" xmlns="http://www.w3.org/2000/svg" fill="currentColor" viewBox="0 0 16 16">
@@ -54,9 +50,15 @@
                         </svg>
                     </div>
                     <div class="h-75 pt-5">
-                        <div class="text-nova text-primary text-center" style="font-size: 2vw;"><strong>Lorem Ipsum</strong></div>
-                        <div class="text-justify" style="font-size: 0.8vw;">Nam pellentesque quis massa non venenatis. Praesent vulputate quam eleifend tincidunt volutpat. Curabitur porta diam at consectetur consectetur.</div>
-                        <div class="text-nova text-center mt-5" style="font-size: 1.5vw; color: #3f98d4;"><a class="text-decoration-none" href="#">Ver más <i class="bi bi-arrow-right"></i></a></div>
+                        <div class="text-nova text-primary text-center" style="font-size: 2vw;">
+                            <strong>Lorem Ipsum</strong>
+                        </div>
+                        <div class="text-justify" style="font-size: 0.8vw;">
+                            Nam pellentesque quis massa non venenatis. Praesent vulputate quam eleifend tincidunt volutpat. Curabitur porta diam at consectetur consectetur.
+                        </div>
+                        <div class="text-nova text-center mt-5">
+                            <a class="btn btn-lg btn-border-hover text-muted" href="#" style="font-size: 1.4vw;">Ver más <i class="bi bi-arrow-right"></i></a>
+                        </div>
                     </div>
                 </div>
             </div>
