@@ -1,6 +1,7 @@
 // $primary: #606bc0;
 // $secondary: #dededc;
 $primary: #154e9c;
+$info: #3f98d4;
 
 @import "bootstrap/scss/bootstrap";
 @import "~bootstrap-icons";
@@ -12,6 +13,7 @@ $primary: #154e9c;
 // Fonts 
 @import url('https://fonts.googleapis.com/css2?family=Oxanium:wght@200;300;400;500;600;700;800&display=swap');
 // Animations
+@import "./animations/btn-border-hover.scss";
 @import "./animation.scss";
 
 body{ background-color: #fafbfe; }
@@ -29,10 +31,5 @@ body{ background-color: #fafbfe; }
 
 .text-nova{ font-family: 'Oxanium'; }
 
-.btn-outline-light:hover {
-    color: #152137;
-}
-.nav-link:hover{
-    color: #ffffff;
-    background-color: #4c67af;
-}
+.btn-outline-light:hover { color: #152137; }
+.nav-link:hover{ color: #ffffff; background-color: $info; }
