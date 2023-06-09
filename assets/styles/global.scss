@@ -1,5 +1,6 @@
 // $primary: #606bc0;
 // $secondary: #dededc;
+$primary: #154e9c;
 
 @import "bootstrap/scss/bootstrap";
 @import "~bootstrap-icons";
@@ -7,15 +8,13 @@
 // Widgets
 @import "./widgets/banner.scss";
 @import "./widgets/banner-container.scss";
-@import "./widgets/card-icon.scss";
+@import "./widgets/card-icon-container.scss";
 // Fonts 
 @import url('https://fonts.googleapis.com/css2?family=Oxanium:wght@200;300;400;500;600;700;800&display=swap');
 // Animations
 @import "./animation.scss";
 
-body{
-    background-color: #fafbfe;
-}
+body{ background-color: #fafbfe; }
 
 .border-radius-0 { border-radius: 0px; }
 
@@ -31,9 +30,9 @@ body{
 .text-nova{ font-family: 'Oxanium'; }
 
 .btn-outline-light:hover {
-    color: #1b76fd;
+    color: #152137;
 }
 .nav-link:hover{
     color: #ffffff;
-    background-color: #1b76fd;
+    background-color: #4c67af;
 }

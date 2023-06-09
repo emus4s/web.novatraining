@@ -24,6 +24,14 @@ Encore
     
     .copyFiles(
         {
+            from: './assets/css',
+            to: 'css/[path][name].[ext]',
+            //pattern: /\.(png|jpg|jpeg)$/
+        }
+    )
+
+    .copyFiles(
+        {
             from: './assets/banners',
             to: 'banners/[path][name].[ext]'
         }

@@ -47,7 +47,7 @@ class ContactType extends AbstractType
                     new NotBlank()
                 ]
             ])
-            ->add('enviar',SubmitType::class)
+           // ->add('enviar',SubmitType::class)
         ;
     }
 
