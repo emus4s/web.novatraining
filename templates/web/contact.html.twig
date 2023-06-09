@@ -3,31 +3,6 @@
     <link rel="stylesheet" href="{{ asset('build/css/form.css') }}"/>
 {% endblock %}
 {% block body %}
-<<<<<<< HEAD
-    <div class="container text-center">
-        <div class="row justify-content-md-center">
-            {{ form_start(form, {'attr': {'novalidate': 'novalidate'}}) }}
-            <div class="row">
-                <div class="col-6">
-                    {{ form_row(form.nombre) }}
-                </div>
-                <div class="col-6">
-                    {{ form_row(form.apellido) }}
-                </div>
-                <div class="col-6">
-                    {{ form_row(form.telefono) }}
-                </div>
-                <div class="col-6">
-                    {{ form_row(form.email) }}
-                </div>
-                <div class="col-12">
-                    {{ form_row(form.mensaje) }}
-                </div>
-            </div>
-
-            {{ form_end(form) }}
-        </div>
-=======
     <div class="container my-5">
         {{ form_start(form, {'attr': {'novalidate': 'novalidate'}}) }}
             <fieldset class="shadow">
@@ -49,12 +24,11 @@
                         {{ form_row(form.mensaje) }}
                     </div>
                     <div class="col-12">
-                        <button class="btn btn-primary btn-lg w-100" type"submit">Enviar</button>
+                        <button class="btn btn-primary btn-lg w-100" type="submit">Enviar</button>
                     </div>
                 </div>
             </fieldset>
         {{ form_end(form) }}
->>>>>>> c0b84f029285a2ddc797efc47bb8c480c06d1c39
     </div>
 {% endblock %}
 {% block title %}
